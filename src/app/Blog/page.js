@@ -26,15 +26,15 @@ export default function Blog() {
                 <p className="text-black text-center text-xl max-[500px]:text-sm w-[50vw] max-[1000px]:w-[90vw] max-[500px]:text-sm">Stay informed with the latest technology trends, expert insights, software development practices, AI innovations, cybersecurity updates, and career guidance designed to empower students, professionals, and businesses in the digital era.</p>
             </div>
             <div className="grid grid-cols-3 max-[1000px]:grid-cols-1 gap-y-10 transform-transition duration-600 p-7 gap-x-10">
-                <div className="w-[30vw] max-[1000px]:w-[90vw]  hover:-translate-y-7 min-h-[500px] rounded-lg border-1 border-black">
+                <div className="w-[30vw] max-[1000px]:w-[90vw]  hover:-translate-y-3 transform-transition duration-300 min-h-[500px] rounded-lg border-1 border-black">
                     <img src="webdeveloper2.jpeg" className="w-[30vw] object-cover max-[1000px]:w-[90vw] h-[400px]"/>
                     <p className="p-5 text-black font-semibold max-[500px]:text-sm">Frontend in 2026: What Junior Developers Should Actually Learn First</p>
                 </div>
-                <div className="w-[30vw]  max-[1000px]:w-[90vw] hover:-translate-y-7 min-h-[500px] rounded-lg border-1 border-black">
+                <div className="w-[30vw]  max-[1000px]:w-[90vw] hover:-translate-y-3 transform-transition duration-300 min-h-[500px] rounded-lg border-1 border-black">
                     <img src="webdeveloper3.jpg" className="w-[30vw]  max-[1000px]:w-[90vw] object-cover h-[400px]"/>
                     <p className="p-5 text-black font-semibold max-[500px]:text-sm">AI for Everyone: How Students Can Use AI Tools Without Falling Behind</p>
                 </div>
-                 <div className="w-[30vw]  max-[1000px]:w-[90vw] hover:-translate-y-7 min-h-[500px] rounded-lg border-1 border-black">
+                 <div className="w-[30vw]   max-[1000px]:w-[90vw] hover:-translate-y-3 transform-transition duration-300 min-h-[500px] rounded-lg border-1 border-black">
                     <img src="ca.jpeg" className="w-[30vw] object-cover  max-[1000px]:w-[90vw] h-[400px]"/>
                     <p className="p-5 text-black font-semibold max-[500px]:text-sm">From Training to First Job: How to Build a Portfolio That Gets You Hired</p>
                 </div>

@@ -4,6 +4,7 @@ import { useState,useEffect } from "react";
 import Footer from "@/Components/Footer/page";
 import Overheadbar from "@/Components/Overhead-bar/page";
 import Link from "next/link";
+import axios from "axios";
 import {  GraduationCap,
   BookOpen,
   Monitor,
@@ -16,8 +17,10 @@ export default function Courses() {
 
     const [state,setState]=useState(0)
     const [isDesktop,setIsDesktop]=useState(false)
+    const [enrollmentfalse,setEnrollmentFalse]=useState(false)
     const [text,setText]=useState("")
     const [letter,setLetter]=useState("")
+    const [enrollment,setEnrollment]=useState({course:"",name:"",contact:"",email:"",state:"",gender:""})
 
     const array1=[
         {id:2,imager:"/ngo1.jpeg"},
@@ -68,6 +71,22 @@ export default function Courses() {
 }, [state,itemsperpage,start]);
 
 
+// course:"",name:"",contact:"",email:"",state:"",gender:""
+
+function handleCreate(e){
+    e.preventDefault()
+    setEnrollmentFalse(true)
+    axios.post("http://localhost:9000/enrollment",{
+            course:enrollment.course,
+            name:enrollment.name,
+            contact:enrollment.contact,
+            email:enrollment.email,
+            state:enrollment.state,
+            gender:enrollment.gender
+    }).then(()=>{setTimeout(()=>setEnrollmentFalse(false),3000),setEnrollment({course:"",name:"",contact:"",email:"",state:"",gender:""})}).catch((error)=>console.log("error",error.message))
+}
+
+
 function next() {
     if (start + itemsperpage < array1.length) {
     setState((currentState) => currentState + 1);
@@ -75,7 +94,8 @@ function next() {
     setState(0);
   }
 }
-          
+
+const partnering=[...array1,...array1]
     
 
     
@@ -219,25 +239,23 @@ function next() {
                         </div>
                     </div>
                 </div>
-                <div className="flex gap-8 items-center justify-center pt-20">
-                    <ChevronLeft size={70} onClick={prev}/>
-                    {
-                        visible.map((x)=>(
-                                    <div  className="flex gap-96 transform-transition duration-500" key={x.id}>
-                        <img src={x.imager} className="h-[400px] max-[1000px]:w-[80vw] max-[1000px]:h-auto  w-[20vw]"/>
-                    </div>
-                        ))
+               <div className="w-full overflow-hidden mt-10">
+                        <div className="marquee-track">
+                            {partnering.map((x, index) => (
+                                <div key={`${x.id}-${index}`} className="w-[330px] max-[500px]:w-[90vw] h-[350px] shrink-0 border border-black flex items-center justify-center rounded-lg overflow-hidden bg-white">
+                                    <img src={x.imager} alt={`Funding partner ${x.id}`} className="h-full w-[330px] " />
+                                </div>
+                            ))}
+                        </div>
                     
-}
-                    <ChevronRight size={70} onClick={next}/>
                 </div>
                  <div className=" flex flex-col items-start w-full max-[500px]:p-5  gap-7 pt-20 max-[1120px]:p-10 p-30 ">
                         <div className="flex flex-col  gap-3">
-                        <p className="text-[#06896B] font-bold text-4xl max-[500px]:text-2xl">Contact Us</p>
+                        <p id="fomarik" className="text-[#06896B] font-bold text-4xl max-[500px]:text-2xl">Contact Us</p>
                         <p className="text-black text-2xl max-[500px]:text-base">For Enrollment, kindly share your Details</p>
                         </div>
-                        <div className="grid grid-cols-2 max-[1120px]:grid-cols-1 gap-x-11  gap-y-7">
-                            <select value={text} onChange={(e)=>setText(e.target.value)} className="w-[30vw] max-[1120px]:w-[80vw] h-auto border-1 max-[500px]:text-sm p-2 border-black">
+                        <form id="formarika" onSubmit={handleCreate} className="grid grid-cols-2 max-[1120px]:grid-cols-1 gap-x-11  gap-y-7">
+                            <select value={enrollment.course} onChange={(e)=>setEnrollment({...enrollment,course:e.target.value})} className="w-[30vw] rounded-lg max-[1120px]:w-[80vw] h-auto border-1 max-[500px]:text-sm p-2 border-black" required>
                                 <option value="">select course preference</option>
                                 <option value="Awareness course">Awareness course</option>
                                 <option value="Career & Skill development">Career & Skill development</option>
@@ -245,17 +263,18 @@ function next() {
                                 <option value="Enterprenuerial courses">Enterprenuerial courses</option>
                                 <option value="AI enabled courses in IT and ITES">AI enabled courses in IT and ITES</option>
                             </select>
-                            <input placeholder="Name" className="w-[30vw] max-[500px]:text-sm max-[1120px]:w-[80vw] p-1 h-auto border-1 border-black"/>
-                            <input  placeholder="Mobile No." className="w-[30vw] max-[500px]:text-sm max-[1120px]:w-[80vw] p-1 h-auto border-1 border-black"/>
-                            <input type="email" placeholder="Email Id" className="w-[30vw] max-[500px]:text-sm max-[1120px]:w-[80vw] p-1 h-auto border-1 border-black"/>
-                            <input placeholder="State" className="w-[30vw] max-[1120px]:w-[80vw] max-[500px]:text-sm p-1 h-auto border-1 border-black"/>
-                            <select value={letter} onChange={(e)=>setLetter(e.target.value)} className="w-[30vw] max-[500px]:text-sm max-[1120px]:w-[80vw] max-[1120px]:p-3 h-auto border-1 border-black">
+                            <input value={enrollment.name} onChange={(e)=>setEnrollment({...enrollment,name:e.target.value})} placeholder="Name" className="w-[30vw] rounded-lg max-[500px]:text-sm max-[1120px]:w-[80vw] p-1 h-auto border-1 border-black" required/>
+                            <input value={enrollment.contact} onChange={(e)=>setEnrollment({...enrollment,contact:e.target.value})}  placeholder="Mobile No." className="w-[30vw] rounded-lg max-[500px]:text-sm max-[1120px]:w-[80vw] p-1 h-auto border-1 border-black" required/>
+                            <input value={enrollment.email} onChange={(e)=>setEnrollment({...enrollment,email:e.target.value})} type="email" placeholder="Email Id" className="w-[30vw] rounded-lg max-[500px]:text-sm max-[1120px]:w-[80vw] p-1 h-auto border-1 border-black" required/>
+                            <input value={enrollment.state} onChange={(e)=>setEnrollment({...enrollment,state:e.target.value})} placeholder="State" className="w-[30vw] max-[1120px]:w-[80vw] rounded-lg max-[500px]:text-sm p-1 h-auto border-1 border-black" required/>
+                            <select value={enrollment.gender} onChange={(e)=>setEnrollment({...enrollment,gender:e.target.value})} className="w-[30vw] rounded-lg max-[500px]:text-sm max-[1120px]:w-[80vw] max-[1120px]:p-3 h-auto border-1 border-black" required>
                                 <option value="">select gender</option>
                                 <option value="male">male</option>
                                 <option value="female">female</option>
                             </select>
-                        </div>
-                    <button className="bg-[#06896B] max-[500px]:text-lg w-[200px] text-white rounded-lg p-1 hover:scale-105 hover:bg-green-800">Submit</button>
+                             <button type="submit" className="bg-[#06896B] max-[500px]:text-lg w-[200px] text-white rounded-lg p-1 hover:scale-105 hover:bg-green-800">{enrollmentfalse===false?"Submit":"Submitting..."}</button>
+                        </form>
+                   
                 </div>
                
                                 </div>

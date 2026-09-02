@@ -1,14 +1,33 @@
 "use client"
-import Image from "next/image";
-import { useState,useEffect } from "react";
 import Footer from "@/Components/Footer/page";
 import Overheadbar from "@/Components/Overhead-bar/page";
-import Link from "next/link";
-import { ChevronDown,ChevronRight,ChevronLeft, DivideCircle } from "lucide-react";
 
 export default function Funding() {
+   const partnerLogos = [
+  { id: 1,  src: "/infoedge.jpeg" },
+  { id: 2,  src: "/chiratae.jpeg" },
+  { id: 3,  src: "/omidyar.jpeg" },
+  { id: 4,  src: "/lightspeed.jpeg" },
+  { id: 5,  src: "/venture.jpeg" },
+  { id: 6,  src: "/orios.jpeg" },
+  { id: 7,  src: "/kalaari.jpeg" },
+  { id: 8,  src: "/sequioa.jpeg" },
+  { id: 9,  src: "/ivycap.jpeg" },
+  { id: 10, src: "/stellaris.jpeg" },
+  { id: 11, src: "/blume.jpeg" },
+  { id: 12, src: "/ankur.jpeg" },
+  { id: 13, src: "/accel.jpeg" },
+  { id: 14, src: "/matrix.jpeg" },
+  { id: 15, src: "/eppendorf.jpeg" },
+  { id: 16, src: "/cipla.jpeg" },
+  { id: 17, src: "/hdfc.jpeg" },
+  { id: 18, src: "/persistent.jpeg" },
+  { id: 19, src: "/praj.jpeg" },
+  { id: 20, src: "/intox.jpeg" },
+];
 
-    
+  const repeatedLogos = [...partnerLogos, ...partnerLogos];
+
   return (
     <div className="flex flex-col flex-1 leading-loose gap-0 tracking-widest  items-center overflow-x-hidden min-h-screen justify-center bg-white font-sans">
           {/* overhead bar */}
@@ -43,66 +62,13 @@ export default function Funding() {
             </div>
             <div className="flex flex-col gap-8 items-center p-40 max-[1090px]:p-10 max-[800px]:p-5">
                     <p className="text-3xl font-bold text-[#06896B] max-[500px]:text-2xl">Key Funding Partners</p>
-                    <div className="grid grid-cols-4 max-[500px]:grid-cols-1 max-[800px]:grid-cols-2  max-[1090px]:grid-cols-3 gap-x-20 gap-y-6">
-                        <div className="w-[200px] max-[500px]:w-[90vw] h-[200px] border-1 flex flex-col items-center justify-center border-black object-cover  rounded-lg">
-                            <img src="/infoedge.jpeg" className="min-h-full"/>
-                        </div>
-                        <div className="w-[200px] max-[500px]:w-[90vw]  h-[200px] border-1 flex flex-col items-center justify-center border-black object-cover  rounded-lg">
-                            <img src="/chiratae.jpeg" className="min-h-full"/>
-                        </div>
-                        <div className="w-[200px] max-[500px]:w-[90vw] h-[200px] border-1 flex flex-col items-center justify-center border-black object-cover  rounded-lg">
-                            <img src="/omidyar.jpeg"  className="min-h-full"/>
-                        </div>
-                        <div className="w-[200px] max-[500px]:w-[90vw] h-[200px] border-1 flex flex-col items-center justify-center border-black object-cover  rounded-lg">
-                            <img src="/lightspeed.jpeg"  className="min-h-full"/>
-                        </div>
-                        <div className="w-[200px] max-[500px]:w-[90vw] max-[500px]:w-[90vw] h-[200px] border-1 flex flex-col items-center justify-center border-black object-cover  rounded-lg">
-                            <img src="/venture.jpeg"  className="min-h-full"/>
-                        </div>
-                        <div className="w-[200px] max-[500px]:w-[90vw] h-[200px] border-1 flex flex-col items-center justify-center border-black object-cover  rounded-lg">
-                            <img src="/orios.jpeg"/>
-                        </div>
-                        <div className="w-[200px] max-[500px]:w-[90vw] h-[200px] border-1 flex flex-col items-center justify-center border-black object-cover  rounded-lg">
-                            <img src="/kalaari.jpeg"  className="min-h-full"/>
-                        </div>
-                        <div className="w-[200px] max-[500px]:w-[90vw] h-[200px] border-1 flex flex-col items-center justify-center border-black object-cover  rounded-lg">
-                            <img src="/sequioa.jpeg"  className="min-h-full"/>
-                        </div>
-                        <div className="w-[200px] max-[500px]:w-[90vw] h-[200px] border-1 flex flex-col items-center justify-center border-black object-cover  rounded-lg">
-                            <img src="/ivycap.jpeg"  className="min-h-full"/>
-                        </div>
-                        <div className="w-[200px] max-[500px]:w-[90vw] h-[200px] border-1 flex flex-col items-center justify-center border-black object-cover  rounded-lg">
-                            <img src="/stellaris.jpeg"  className="min-h-full"/>
-                        </div>
-                        <div className="w-[200px] max-[500px]:w-[90vw] h-[200px] border-1 flex flex-col items-center justify-center border-black object-cover  rounded-lg">
-                            <img src="/blume.jpeg"  className="min-h-full"/>
-                        </div>
-                        <div className="w-[200px] max-[500px]:w-[90vw] h-[200px] border-1 flex flex-col items-center justify-center border-black object-cover  rounded-lg">
-                            <img src="/ankur.jpeg"  className="min-h-full"/>
-                        </div>
-                        <div className="w-[200px] max-[500px]:w-[90vw] h-[200px] border-1 flex flex-col items-center justify-center border-black object-cover  rounded-lg">
-                            <img src="/accel.jpeg"  className="min-h-full"/>
-                        </div>
-                        <div className="w-[200px] max-[500px]:w-[90vw] h-[200px] border-1 flex flex-col items-center justify-center border-black object-cover  rounded-lg">
-                            <img src="/matrix.jpeg"  className="min-h-full"/>
-                        </div>
-                        <div className="w-[200px] max-[500px]:w-[90vw] h-[200px] border-1 flex flex-col items-center justify-center border-black object-cover  rounded-lg">
-                            <img src="/eppendorf.jpeg"  className="min-h-full"/>
-                        </div>
-                        <div className="w-[200px] max-[500px]:w-[90vw] h-[200px] border-1 flex flex-col items-center justify-center border-black object-cover  rounded-lg">
-                            <img src="/cipla.jpeg"  className="min-h-full"/>
-                        </div>
-                        <div className="w-[200px] max-[500px]:w-[90vw] h-[200px] border-1 flex flex-col items-center justify-center border-black object-cover  rounded-lg">
-                            <img src="/hdfc.jpeg"  className="min-h-full"/>
-                        </div>
-                        <div className="w-[200px] max-[500px]:w-[90vw] h-[200px] border-1 flex flex-col items-center justify-center border-black object-cover  rounded-lg">
-                            <img src="/persistent.jpeg"  className="min-h-full"/>
-                        </div>
-                        <div className="w-[200px] max-[500px]:w-[90vw] h-[200px] border-1 flex flex-col items-center justify-center border-black object-cover  rounded-lg">
-                            <img src="/praj.jpeg"  className="min-h-full"/>
-                        </div>
-                        <div className="w-[200px] max-[500px]:w-[90vw] h-[200px] border-1 flex flex-col items-center justify-center border-black object-cover  rounded-lg">
-                            <img src="/intox.jpeg"  className="min-h-full"/>
+                    <div className="w-full overflow-hidden">
+                        <div className="marquee-track">
+                            {partnerLogos.map((x, index) => (
+                                <div key={`${x.id}-${index}`} className="w-[230px] max-[500px]:w-[90vw] h-[300px] shrink-0 border border-black flex items-center justify-center rounded-lg overflow-hidden bg-white">
+                                    <img src={x.src} alt={`Funding partner ${x.id}`} className="h-full w-full object-contain" />
+                                </div>
+                            ))}
                         </div>
                     </div>
             </div>

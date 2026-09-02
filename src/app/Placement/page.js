@@ -8,6 +8,29 @@ import { ChevronDown,ChevronRight,ChevronLeft, DivideCircle } from "lucide-react
 
 export default function Placement() {
 
+    const partnerLogos = [
+  { id: 1,  src: "/tcs.jpeg" },
+  { id: 2,  src: "/infosys.jpeg" },
+  { id: 3,  src: "/wipro.jpeg" },
+  { id: 4,  src: "/accenture.jpeg" },
+  { id: 5,  src: "/vision95.jpeg" },
+  { id: 6,  src: "/google.jpeg" },
+  { id: 7,  src: "/ibm.jpeg" },
+  { id: 8,  src: "/oracle23.jpeg" },
+  { id: 9,  src: "/amazon3.jpeg" },
+  { id: 10, src: "/dell.jpeg" },
+  { id: 11, src: "/intel.jpeg" },
+  { id: 12, src: "/salesforce.jpeg" },
+  { id: 13, src: "/zoho.jpeg" },
+  { id: 14, src: "/cognizant.jpeg" },
+  { id: 15, src: "/hcl.jpeg" },
+  { id: 16, src: "/techmahindra.jpeg" },
+  { id: 17, src: "/microsoft23.jpeg" },
+  { id: 18, src: "/3dwebsoft.jpeg" },
+  { id: 19, src: "/zensar.jpeg" },
+  { id: 20, src: "/l&t.jpeg" },
+];
+
     
   return (
     <div className="flex flex-col flex-1 leading-loose gap-0 tracking-widest  items-center overflow-x-hidden min-h-screen justify-center bg-white font-sans">
@@ -45,70 +68,20 @@ export default function Placement() {
             </div>
             <div className="flex flex-col gap-8 items-center">
                     <p className="text-3xl font-bold text-[#06896B] p-5">Key Placement Partners</p>
-                    <div className="grid grid-cols-4 max-[500px]:grid-cols-1 max-[800px]:grid-cols-2  max-[1090px]:grid-cols-3 gap-x-20 gap-y-6">
-                        <div className="w-[200px] max-[500px]:w-[90vw] h-[200px] border-1 flex flex-col items-center justify-center border-black object-cover  rounded-lg">
-                            <img src="/tcs.jpeg" className="object-cover"/>
-                        </div>
-                        <div className="w-[200px] max-[500px]:w-[90vw] h-[200px] border-1 flex flex-col items-center justify-center border-black object-cover  rounded-lg">
-                            <img src="/infosys.jpeg" className="min-h-full object-contain"/>
-                        </div>
-                        <div className="w-[200px] max-[500px]:w-[90vw] h-[200px] border-1 flex flex-col items-center justify-center border-black object-cover  rounded-lg">
-                            <img src="/wipro.jpeg"  className="h-full object-contain"/>
-                        </div>
-                        <div className="w-[200px] max-[500px]:w-[90vw] h-[200px] border-1 flex flex-col items-center justify-center border-black object-cover  rounded-lg">
-                            <img src="/accenture.jpeg"  className="h-full object-contain"/>
-                        </div>
-                        <div className="w-[200px] max-[500px]:w-[90vw] h-[200px] border-1 flex flex-col items-center justify-center border-black object-cover  rounded-lg">
-                            <img src="/vision95.jpeg"  className="h-[240px] object-contain"/>
-                        </div>
-                        <div className="w-[200px] max-[500px]:w-[90vw] h-[200px] border-1 flex flex-col items-center justify-center border-black object-cover  rounded-lg">
-                            <img src="/google.jpeg"/>
-                        </div>
-                        <div className="w-[200px] max-[500px]:w-[90vw] h-[200px] border-1 flex flex-col items-center justify-center border-black object-cover  rounded-lg">
-                            <img src="/ibm.jpeg"  className="min-h-full"/>
-                        </div>
-                        <div className="w-[200px] max-[500px]:w-[90vw] h-[200px] border-1 flex flex-col items-center justify-center border-black object-cover  rounded-lg">
-                            <img src="/oracle23.jpeg"  className="min-h-full"/>
-                        </div>
-                        <div className="w-[200px] max-[500px]:w-[90vw] h-[200px] border-1 flex flex-col items-center justify-center border-black object-cover  rounded-lg">
-                            <img src="/amazon3.jpeg"  className="min-h-full"/>
-                        </div>
-                        <div className="w-[200px] max-[500px]:w-[90vw] h-[200px] border-1 flex flex-col items-center justify-center border-black object-cover  rounded-lg">
-                            <img src="/dell.jpeg"  className="min-h-full"/>
-                        </div>
-                        <div className="w-[200px] max-[500px]:w-[90vw] h-[200px] border-1 flex flex-col items-center justify-center border-black object-cover  rounded-lg">
-                            <img src="/intel.jpeg"  className="min-h-full"/>
-                        </div>
-                        <div className="w-[200px] max-[500px]:w-[90vw] h-[200px] border-1 flex flex-col items-center justify-center border-black object-cover  rounded-lg">
-                            <img src="/salesforce.jpeg"  className="min-h-full"/>
-                        </div>
-                        <div className="w-[200px] max-[500px]:w-[90vw] h-[200px] border-1 flex flex-col items-center justify-center border-black object-cover  rounded-lg">
-                            <img src="/zoho.jpeg"  className="min-h-full"/>
-                        </div>
-                        <div className="w-[200px] max-[500px]:w-[90vw] h-[200px] border-1 flex flex-col items-center justify-center border-black object-cover  rounded-lg">
-                            <img src="/cognizant.jpeg"  className="min-h-full"/>
-                        </div>
-                        <div className="w-[200px] max-[500px]:w-[90vw] h-[200px] border-1 flex flex-col items-center justify-center border-black object-cover  rounded-lg">
-                            <img src="/hcl.jpeg"  className="min-h-full"/>
-                        </div>
-                        <div className="w-[200px] max-[500px]:w-[90vw] h-[200px] border-1 flex flex-col items-center justify-center border-black object-cover  rounded-lg">
-                            <img src="/techmahindra.jpeg"  className="min-h-full"/>
-                        </div>
-                        <div className="w-[200px] max-[500px]:w-[90vw] h-[200px] border-1 flex flex-col items-center justify-center border-black object-cover  rounded-lg">
-                            <img src="/microsoft23.jpeg"  className="min-h-full"/>
-                        </div>
-                        <div className="w-[200px] max-[500px]:w-[90vw] h-[200px] border-1 flex flex-col items-center justify-center border-black object-cover  rounded-lg">
-                            <img src="/3dwebsoft.jpeg"  className="min-h-full"/>
-                        </div>
-                        <div className="w-[200px] max-[500px]:w-[90vw] h-[200px] border-1 flex flex-col items-center justify-center border-black object-cover  rounded-lg">
-                            <img src="/zensar.jpeg"  className="min-h-full"/>
-                        </div>
-                        <div className="w-[200px] max-[500px]:w-[90vw] h-[200px] border-1 flex flex-col items-center justify-center border-black object-cover  rounded-lg">
-                            <img src="/l&t.jpeg"  className="min-h-full"/>
+                     <div className="w-full overflow-hidden">
+                        <div className="marquee-track">
+                            {partnerLogos.map((x, index) => (
+                                <div key={`${x.id}-${index}`} className="w-[230px] max-[500px]:w-[90vw] h-[300px] shrink-0 border border-black flex items-center justify-center rounded-lg overflow-hidden bg-white">
+                                    <img src={x.src} alt={`Funding partner ${x.id}`} className="h-full w-full object-contain" />
+                                </div>
+                            ))}
                         </div>
                     </div>
+            
             </div>
+                    
 </div>
+                    
 {/* footer */}
 <Footer/>          
     </div>

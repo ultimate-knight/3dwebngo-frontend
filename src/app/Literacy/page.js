@@ -40,9 +40,9 @@ export default function Literacy() {
                     <div className="flex flex-col gap-5">
                         <p className="text-[#06896B] w-[80vw] font-bold text-3xl text-center max-[500px]:w-[90vw] max-[500px]:text-2xl">3DWEBSOFT Foundation follows three models of implementation in the Digital Literacy Program:</p>
                         <ul className="flex flex-col gap-3 list-disc">
-                            <li className="max-[500px]:text-sm">Center-based training — structured digital literacy sessions delivered at 3DWEBSOFT Foundation centers, guided by trained facilitators</li>
-                            <li className="max-[500px]:text-sm">Rural outreach — taking digital skills directly into underserved and remote communities to bridge the digital divide at the doorstep</li>
-                            <li className="max-[500px]:text-sm">Community-led learning — training local Master Trainers and forming peer groups so digital knowledge continues to spread within the community</li>
+                            <li className="max-[500px]:text-sm"><span className="font-bold">Center-based training</span> — structured digital literacy sessions delivered at 3DWEBSOFT Foundation centers, guided by trained facilitators</li>
+                            <li className="max-[500px]:text-sm"><span className="font-bold">Rural outreach</span> — taking digital skills directly into underserved and remote communities to bridge the digital divide at the doorstep</li>
+                            <li className="max-[500px]:text-sm"><span className="font-bold">Community-led learning</span> — training local Master Trainers and forming peer groups so digital knowledge continues to spread within the community</li>
                         </ul>
                     </div>
                   
@@ -51,7 +51,7 @@ export default function Literacy() {
                         <p className="text-[#06896B] text-3xl font-bold">Success Story</p>
                         <img src="/ashwin.jpeg" className="rounded-full object-cover aspect-square w-[200px] h-[200px]"/>
                         <p className="text-2xl font-semibold ">Ashwin</p>
-                        <div className="text-center flex flex-col gap-5">
+                        <div className="text-center flex flex-col gap-5 w-[60vw] max-[500px]:w-[90vw] text-left">
                         <p className="max-[500px]:text-sm">Ashwin comes from a farming family in rural Karnataka. His father works the land and his mother manages the home, and with two elder brothers already married, much of the responsibility of supporting the household falls on Ashwin. He began looking for ways to build a better future for his family from a young age.</p>
                         <p className="max-[500px]:text-sm">Ashwin enrolled in the Certified Digital Literacy course at a 3DWEBSOFT Foundation center. He took to the course quickly and, encouraged by his progress, went on to explore more advanced digital skills. When disruptions forced the center to pause in-person classes, Ashwin refused to let his momentum slow — he used the time to volunteer in community awareness drives run by the Foundation.</p>
                         <p className="max-[500px]:text-sm">As soon as online classes began, Ashwin adapted and resumed his learning. He encouraged other children in his area, whose schooling had been interrupted, to keep learning through the Foundation's digital resources. But his proudest achievement has been the change within his own family.</p>

@@ -62,7 +62,7 @@ export default function About() {
   ];
 
   return (
-    <div className="flex flex-col flex-1 gap-0 tracking-widest leading-loose  items-center overflow-x-hidden min-h-screen justify-center bg-white font-sans">
+    <div className="flex flex-col flex-1  tracking-widest leading-loose  items-center overflow-x-hidden min-h-screen justify-center bg-white font-sans">
       {/* overhead bar */}
       <Overheadbar />
 
@@ -91,28 +91,29 @@ export default function About() {
             </p>
             <ul className="px-6 flex flex-col max-[500px]:text-sm gap-3 list-disc">
               <li>
-                Be Customer Centric — put students and employers first by
+                <span className="font-bold">Be Customer Centric</span> — put students and employers first by
                 providing high-quality training aligned with industry standards.
               </li>
               <li>
-                Deliver on every commitment — ensure strong placement support so
+                <span className="font-bold">Deliver on every commitment</span> — ensure strong placement support so
                 learning translates into successful careers.
               </li>
               <li>
-                Drive Innovation — deliver innovative solutions and
+                <span className="font-bold">Drive Innovation</span> — deliver innovative solutions and
                 career-focused programs, and strive for excellence in everything
                 we do.
               </li>
               <li>
-                Commit to Continuous Improvement — stay dedicated to customer
+                <span className="font-bold">Commit to Continuous Improvement</span> — stay dedicated to customer
                 satisfaction and ongoing growth.
               </li>
               <li>
-                Empower for Self-Reliance — bridge the gap between learning and
+                <span className="font-bold">Empower for Self-Reliance</span> — bridge the gap between learning and
                 earning for youth, women, students, and job seekers.
               </li>
             </ul>
           </div>
+          <div>
           <div className="flex flex-col gap-5  p-10">
             <p className="text-[#06896B] max-[500px]:text-2xl text-3xl  uppercase font-bold tracking-widest">
               Governing body
@@ -126,7 +127,7 @@ export default function About() {
             </p>
           </div>
           <div className="grid grid-cols-3  gap-y-12 gap-x-20 max-[1000px]:grid-cols-1 p-3 max-[500px]:pl-8 pl-10">
-            <div className="w-[28vw] order-1 max-[1000px]:w-[85vw] flex flex-col hover:-translate-y-5 transform-transition duration-300 p-5 items-center justify-center gap-7  shadow-xl shadow-gray-300 rounded-lg border-2 border-gray-400 min-h-[300px]">
+            <div className="w-[28vw] order-1 max-[1000px]:w-[85vw] flex flex-col hover:-translate-y-5 transform-transition duration-300 p-5 items-center justify-center gap-3  shadow-xl shadow-gray-300 rounded-lg border-2 border-gray-400 min-h-[300px]">
               <img
                 src="/director.jpeg"
                 className="w-[150px] h-[150px] border-4 border-green-600 aspect-square rounded-full"
@@ -142,7 +143,7 @@ export default function About() {
                 staffing and software delivery.
               </p>
             </div>
-            <div className="w-[28vw] order-2 max-[1000px]:w-[85vw] transform-transition duration-300 hover:-translate-y-5 flex flex-col p-5 items-center justify-center gap-7  shadow-xl shadow-gray-300 rounded-lg border-2 border-gray-400 min-h-[300px]">
+            <div className="w-[28vw] order-2 max-[1000px]:w-[85vw] transform-transition duration-300 hover:-translate-y-5 flex flex-col p-5 items-center justify-center gap-3  shadow-xl shadow-gray-300 rounded-lg border-2 border-gray-400 min-h-[300px]">
               <img
                 src="/director3.jpeg"
                 className="w-[150px] h-[150px] border-4 border-green-600 aspect-square rounded-full"
@@ -157,68 +158,9 @@ export default function About() {
                 Leads strategic planning and manages key business functions.
               </p>
             </div>
-            <div className="w-[28vw] order-7 max-[1000px]:w-[85vw] transform-transition duration-300 hover:-translate-y-5 flex flex-col p-5  items-center justify-center gap-7  shadow-xl shadow-gray-300 rounded-lg border-2 border-gray-400 min-h-[300px]">
-              <img
-                src="/ishwari.jpeg"
-                className="w-[150px] h-[150px] border-4 border-green-600 aspect-square rounded-full"
-              />
-              <div className="flex flex-col items-center gap-1">
-                <p className="text-xl text-[#06896B] font-bold">
-                  Ishwari Ramesh Kapale
-                </p>
-                <p>Director of Vijaypur</p>
-              </div>
-              <p className="text-center w-[25vw] max-[1000px]:w-[70vw] text-sm">
-                Oversees operations and ensures effective execution of
-                organizational goals in vijaypur.
-              </p>
-            </div>
-            <div className="w-[28vw] order-4 max-[1000px]:w-[85vw] transform-transition duration-300 hover:-translate-y-5 flex flex-col p-5  items-center justify-center gap-7  shadow-xl shadow-gray-300 rounded-lg border-2 border-gray-400 min-h-[300px]">
-              <img
-                src="/wanishree.jpeg"
-                className="w-[150px] h-[150px] border-4 border-green-600 aspect-square rounded-full"
-              />
-              <div className="flex flex-col items-center gap-1">
-                <p className="text-xl text-[#06896B] font-bold">WaniShree</p>
-                <p>Director</p>
-              </div>
-              <p className="text-center w-[25vw] max-[1000px]:w-[70vw] text-sm">
-                Oversees operations and ensures effective execution of
-                organizational goals.
-              </p>
-            </div>
-            <div className="w-[28vw] order-5 max-[1000px]:w-[85vw] transform-transition duration-300 hover:-translate-y-5 flex flex-col p-5  items-center justify-center gap-7  shadow-xl shadow-gray-300 rounded-lg border-2 border-gray-400 min-h-[300px]">
-              <img
-                src="/rajkumar.jpeg"
-                className="w-[150px] h-[150px] border-4 border-green-600 aspect-square rounded-full"
-              />
-              <div className="flex flex-col items-center gap-1">
-                <p className="text-xl text-[#06896B] font-bold">
-                  Rajkumar Naik
-                </p>
-                <p>Muddebihal Branch Incharge</p>
-              </div>
-              <p className="text-center w-[25vw] max-[1000px]:w-[70vw] text-sm">
-                Manages daily branch operations, coordinates team activities,
-                and ensures quality service delivery.
-              </p>
-            </div>
-            <div className="w-[28vw] order-4 max-[1000px]:w-[85vw] transform-transition duration-300 hover:-translate-y-5 flex flex-col p-5  items-center justify-center gap-7  shadow-xl shadow-gray-300 rounded-lg border-2 border-gray-400 min-h-[300px]">
-              <img
-                src="/manan.jpeg"
-                className="w-[150px] h-[150px] border-4 border-green-600 aspect-square rounded-full"
-              />
-              <div className="flex flex-col items-center gap-1">
-                <p className="text-xl text-[#06896B] font-bold">Malam</p>
-                <p>Director of Bilgi</p>
-              </div>
-              <p className="text-center w-[25vw] max-[1000px]:w-[70vw] text-sm">
-                Oversees operations and ensures effective execution of
-                organizational goals in bilgi.
-              </p>
-            </div>
             
-            <div className="w-[28vw] order-3 max-[1000px]:w-[85vw] transform-transition duration-300 hover:-translate-y-5 flex flex-col p-5 items-center justify-center gap-7  shadow-xl shadow-gray-300 rounded-lg border-2 border-gray-400 min-h-[300px]">
+            
+            <div className="w-[28vw] order-3 max-[1000px]:w-[85vw] transform-transition duration-300 hover:-translate-y-5 flex flex-col p-5 items-center justify-center gap-3  shadow-xl shadow-gray-300 rounded-lg border-2 border-gray-400 min-h-[300px]">
               <img
                 src="/director2.jpeg"
                 className="w-[150px] h-[150px] border-4 border-green-600 aspect-square rounded-full"
@@ -232,7 +174,7 @@ export default function About() {
                 management.
               </p>
             </div>
-            <div className="w-[28vw] order-3 max-[1000px]:w-[85vw] transform-transition duration-300 hover:-translate-y-5 flex flex-col p-5 items-center justify-center gap-7  shadow-xl shadow-gray-300 rounded-lg border-2 border-gray-400 min-h-[300px]">
+            <div className="w-[28vw] order-3 max-[1000px]:w-[85vw] transform-transition duration-300 hover:-translate-y-5 flex flex-col p-5 items-center justify-center gap-3  shadow-xl shadow-gray-300 rounded-lg border-2 border-gray-400 min-h-[300px]">
               <img
                 src="/director5.jpeg"
                 className="w-[150px] h-[150px] border-4 border-green-600 aspect-square rounded-full"
@@ -248,8 +190,107 @@ export default function About() {
                 organizational goals.
               </p>
             </div>
+           
+            
+            </div>
+          {/* </div> */}
+          
+          {/* franchisee partners */}
+            <div className="flex flex-col gap-10 mt-10  p-10">
+            <p className="text-[#06896B] max-[500px]:text-2xl text-3xl  uppercase font-bold tracking-widest">
+              Franchisee Partners
+            </p>
+            <p className="max-[500px]:text-sm">
+            3DWEBSOFT Foundation, a non-profit organization incorporated under Section 8 of the Companies Act, 2013 and registered with the Government of India, extends its mission through a network of authorized Franchisee Partners.
+            </p>
+            <p> These partners operate under the name and guidelines of the Foundation to deliver its programs and services across various regions. Given below is the list of Franchisee Partners associated with the 3DWEBSOFT Foundation.</p>
           </div>
-          <div className="flex max-[1000px]:flex-col gap-7 p-7 items-center justify-center pt-20">
+          <div className="grid grid-cols-3  gap-y-12 gap-x-20 max-[1000px]:grid-cols-1 p-3 max-[500px]:pl-8 pl-10">
+            
+            <div className="w-[28vw] order-4 max-[1000px]:w-[85vw] transform-transition duration-300 hover:-translate-y-5 flex flex-col p-5  items-center justify-center gap-3  shadow-xl shadow-gray-300 rounded-lg border-2 border-gray-400 min-h-[300px]">
+              <img
+                src="/wanishree23.png"
+                className="w-[150px] h-[150px] border-4 border-green-600 aspect-square rounded-full"
+              />
+              <div className="flex flex-col items-center gap-1">
+                <p className="text-xl text-[#06896B] font-bold">WaniShree</p>
+                <p>Franchisee partner</p>
+              </div>
+              <p className="text-center w-[25vw] max-[1000px]:w-[70vw] text-sm">
+                Oversees operations and ensures effective execution of
+                organizational goals.
+              </p>
+            </div>
+            <div className="w-[28vw] order-5 max-[1000px]:w-[85vw] transform-transition duration-300 hover:-translate-y-5 flex flex-col p-5  items-center justify-center gap-3  shadow-xl shadow-gray-300 rounded-lg border-2 border-gray-400 min-h-[300px]">
+              <img
+                src="/rajkumar.jpeg"
+                className="w-[150px] h-[150px] border-4 border-green-600 aspect-square rounded-full"
+              />
+              <div className="flex flex-col items-center gap-1">
+                <p className="text-xl text-[#06896B] font-bold">
+                  Rajkumar Naik
+                </p>
+                <p>Franchisee partner</p>
+              </div>
+              <p className="text-center w-[25vw] max-[1000px]:w-[70vw] text-sm">
+                Manages daily branch operations, coordinates team activities,
+                and ensures quality service delivery.
+              </p>
+              
+            </div>
+              <div className="w-[28vw] order-7 max-[1000px]:w-[85vw] transform-transition duration-300 hover:-translate-y-5 flex flex-col p-5  items-center justify-center gap-3  shadow-xl shadow-gray-300 rounded-lg border-2 border-gray-400 min-h-[300px]">
+              <img
+                src="/ishwari23.png"
+                className="w-[150px]  h-[150px] border-4 border-green-600 aspect-square rounded-full"
+              />
+              <div className="flex flex-col items-center gap-1">
+                <p className="text-xl text-[#06896B] font-bold">
+                  Ishwari Ramesh Kapale
+                </p>
+                <p>Franchisee partner</p>
+              </div>
+              <p className="text-center w-[25vw] max-[1000px]:w-[70vw] text-sm">
+                Oversees operations and ensures effective execution of
+                organizational goals in vijaypur.
+              </p>
+            </div>
+            
+            
+            {/* <div className="w-[28vw] order-3 max-[1000px]:w-[85vw] transform-transition duration-300 hover:-translate-y-5 flex flex-col p-5 items-center justify-center gap-3  shadow-xl shadow-gray-300 rounded-lg border-2 border-gray-400 min-h-[300px]">
+              <img
+                src="/director5.jpeg"
+                className="w-[150px] h-[150px] border-4 border-green-600 aspect-square rounded-full"
+              />
+              <div className="flex flex-col items-center gap-1">
+                <p className="text-xl text-[#06896B] font-bold">
+                  Ramesh Jadhav
+                </p>
+                <p>Franchisee partner</p>
+              </div>
+              <p className="text-center w-[25vw] max-[1000px]:w-[70vw] text-sm">
+                Oversees operations and ensures effective execution of
+                organizational goals.
+              </p>
+            </div> */}
+            <div className="w-[28vw] order-3 max-[1000px]:w-[85vw] transform-transition duration-300 hover:-translate-y-5 flex flex-col p-5 items-center justify-center gap-3  shadow-xl shadow-gray-300 rounded-lg border-2 border-gray-400 min-h-[300px]">
+              <img
+                src="/malam96.png"
+                className="w-[150px] h-[150px] border-4 border-green-600 aspect-square rounded-full"
+              />
+              <div className="flex flex-col items-center gap-1">
+                <p className="text-xl text-[#06896B] font-bold">
+                  Malam
+                </p>
+                <p>Franchisee partner</p>
+              </div>
+              <p className="text-center w-[25vw] max-[1000px]:w-[70vw] text-sm">
+              Oversees operations and ensures effective execution of organizational goals in bilgi.
+              </p>
+            </div>
+          </div>
+          </div>
+        
+          <div className="flex max-[1000px]:flex-col gap-3 p-7 items-center justify-center pt-20">
             <div className="flex flex-col  gap-5 max-[1000px]:order-2">
               <p className="text-3xl text-[#06896B] font-semibold max-[500px]:text-2xl">Founder Message</p>
               <p className="max-[500px]:text-sm">

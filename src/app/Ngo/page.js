@@ -8,6 +8,30 @@ import { ChevronDown,ChevronRight,ChevronLeft, DivideCircle } from "lucide-react
 
 export default function Ngo() {
 
+    const partnerLogos = [
+  { id: 1,  src: "/magicbus.jpeg" },
+  { id: 2,  src: "/casp.jpeg" },
+  { id: 3,  src: "/talwar.jpeg" },
+  { id: 4,  src: "/sleepwell.jpg" },
+  { id: 5,  src: "/deepalaya.jpeg" },
+  { id: 6,  src: "/earth.jpeg" },
+  { id: 7,  src: "/prayatna.jpeg" },
+  { id: 8,  src: "/cks.jpeg" },
+  { id: 9,  src: "/lakshya.jpeg" },
+  { id: 10, src: "/sakashm.jpeg" },
+  { id: 11, src: "/smile.png" },
+  { id: 12, src: "/reach.png" },
+  { id: 13, src: "/Niveda.jpeg" },
+  { id: 14, src: "/Udaan.jpeg" },
+  { id: 15, src: "/Noda.jpeg" },
+  { id: 16, src: "/nab.jpeg" },
+  { id: 17, src: "/adarshila23.jpeg" },
+  { id: 18, src: "/rotary.jpeg" },
+  { id: 19, src: "/youthinvest.jpeg" },
+];
+
+const partnering=[...partnerLogos,...partnerLogos]
+
     
   return (
     <div className="flex flex-col flex-1 leading-loose gap-0 tracking-widest  items-center overflow-x-hidden min-h-screen justify-center bg-white font-sans">
@@ -47,65 +71,17 @@ export default function Ngo() {
             </div>
             <div className="flex flex-col gap-8 items-center">
                     <p className="text-3xl font-bold text-[#06896B]">Key NGO Partners</p>
-                    <div className="grid grid-cols-4 max-[500px]:grid-cols-1 max-[800px]:grid-cols-2  max-[1090px]:grid-cols-3 gap-x-20 gap-y-6">
-                        <div className="w-[200px] max-[500px]:w-[90vw] h-[200px] border-1 flex flex-col items-center justify-center border-black object-cover  rounded-lg">
-                            <img src="/magicbus.jpeg" className="object-cover"/>
+                <div className="w-full overflow-hidden">
+                        <div className="marquee-track">
+                            {partnering.map((x, index) => (
+                                <div key={`${x.id}-${index}`} className="w-[230px] max-[500px]:w-[90vw] h-[300px] shrink-0 border border-black flex items-center justify-center rounded-lg overflow-hidden bg-white">
+                                    <img src={x.src} alt={`Funding partner ${x.id}`} className="h-full w-full object-contain" />
+                                </div>
+                            ))}
                         </div>
-                        <div className="w-[200px] max-[500px]:w-[90vw] h-[200px] border-1 flex flex-col items-center justify-center border-black object-cover  rounded-lg">
-                            <img src="/casp.jpeg" className="min-h-full object-contain"/>
-                        </div>
-                        <div className="w-[200px] max-[500px]:w-[90vw] h-[200px] border-1 flex flex-col items-center justify-center border-black object-cover  rounded-lg">
-                            <img src="/talwar.jpeg"  className="h-full object-contain"/>
-                        </div>
-                        <div className="w-[200px] max-[500px]:w-[90vw] max-[500px]:hidden h-[200px] border-1 flex flex-col items-center justify-center border-black object-cover  rounded-lg">
-                            <img src="/sleepwell.jpg"  className="h-full"/>
-                        </div>
-                        <div className="w-[200px] max-[500px]:w-[90vw] max-[500px]:hidden h-[200px] border-1 flex flex-col items-center justify-center border-black object-cover  rounded-lg">
-                            <img src="/deepalaya.jpeg"/>
-                        </div>
-                        <div className="w-[200px] max-[500px]:w-[90vw] h-[200px] border-1 flex flex-col items-center justify-center border-black object-cover  rounded-lg">
-                            <img src="/earth.jpeg"  className="min-h-full"/>
-                        </div>
-                        <div className="w-[200px] max-[500px]:w-[90vw] h-[200px] border-1 flex flex-col items-center justify-center border-black object-cover  rounded-lg">
-                            <img src="/prayatna.jpeg"  className="min-h-full"/>
-                        </div>
-                        <div className="w-[200px] max-[500px]:w-[90vw] h-[200px] border-1 flex flex-col items-center justify-center border-black object-cover  rounded-lg">
-                            <img src="/cks.jpeg"  className="min-h-full"/>
-                        </div>
-                        <div className="w-[200px] max-[500px]:w-[90vw] h-[200px] border-1 flex flex-col items-center justify-center border-black object-cover  rounded-lg">
-                            <img src="/lakshya.jpeg"  className="min-h-full"/>
-                        </div>
-                        <div className="w-[200px] max-[500px]:w-[90vw] h-[200px] border-1 flex flex-col items-center justify-center border-black object-cover  rounded-lg">
-                            <img src="/sakashm.jpeg"  className="min-h-full"/>
-                        </div>
-                        <div className="w-[200px] max-[500px]:w-[90vw] h-[200px] border-1 flex flex-col items-center justify-center border-black object-cover  rounded-lg">
-                            <img src="/smile.png"  className="min-h-full"/>
-                        </div>
-                        <div className="w-[200px] max-[500px]:w-[90vw] h-[200px] border-1 flex flex-col items-center justify-center border-black object-cover  rounded-lg">
-                            <img src="/reach.png"  className="min-h-full"/>
-                        </div>
-                        <div className="w-[200px] max-[500px]:w-[90vw] h-[200px] border-1 flex flex-col items-center justify-center border-black object-cover  rounded-lg">
-                            <img src="/Niveda.jpeg"  className="min-h-full"/>
-                        </div>
-                        <div className="w-[200px] max-[500px]:w-[90vw] h-[200px] border-1 flex flex-col items-center justify-center border-black object-cover  rounded-lg">
-                            <img src="/Udaan.jpeg"  className="min-h-full"/>
-                        </div>
-                        <div className="w-[200px] max-[500px]:w-[90vw] h-[200px] border-1 flex flex-col items-center justify-center border-black object-cover  rounded-lg">
-                            <img src="/Noda.jpeg"  className="min-h-full"/>
-                        </div>
-                        <div className="w-[200px] max-[500px]:w-[90vw] h-[200px] border-1 flex flex-col items-center justify-center border-black object-cover  rounded-lg">
-                            <img src="/nab.jpeg"  className="min-h-full"/>
-                        </div>
-                        <div className="w-[200px] max-[500px]:w-[90vw] h-[200px] border-1 flex flex-col items-center justify-center border-black object-cover  rounded-lg">
-                            <img src="/adarshila23.jpeg"  className="min-h-full"/>
-                        </div>
-                        <div className="w-[200px] max-[500px]:w-[90vw] h-[200px] border-1 flex flex-col items-center justify-center border-black object-cover  rounded-lg">
-                            <img src="/rotary.jpeg"  className="min-h-full"/>
-                        </div>
-                        <div className="w-[200px] max-[500px]:w-[90vw] h-[200px] border-1 flex flex-col items-center justify-center border-black object-cover  rounded-lg">
-                            <img src="/youthinvest.jpeg"  className="min-h-full"/>
-                        </div>
-                    </div>
+                    
+            
+            </div>
             </div>
 </div>
 {/* footer */}

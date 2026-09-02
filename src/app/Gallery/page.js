@@ -22,12 +22,12 @@ export default function Gallery() {
                             <p className="max-[500px]:text-sm">A glimpse into classrooms, workshops and student life at 3DWEBSOFT foundation.</p>
             </div>
             <div className="pt-10 p-10 grid grid-cols-3 max-[800px]:grid-cols-1 max-[1000px]:grid-cols-2 gap-x-10 gap-y-10">
-                <img src="/glimpse1.jpeg" className="w-[30vw] max-[800px]:w-[90vw] max-[1000px]:w-[45vw] h-[500px] object-cover"/>
-                <img src="/glimpse2.jpeg" className="w-[30vw] max-[800px]:w-[90vw] max-[1000px]:w-[45vw] h-[500px] object-cover"/>
-                <img src="/glimpse3.jpeg" className="w-[30vw] max-[800px]:w-[90vw] max-[1000px]:w-[45vw] h-[500px] object-cover"/>
-                 <img src="/glimpse4.jpeg" className="w-[30vw] max-[800px]:w-[90vw] max-[1000px]:w-[45vw] h-[500px] object-cover"/>
-                <img src="/glimpse5.jpeg" className="w-[30vw] max-[800px]:w-[90vw] max-[1000px]:w-[45vw] h-[500px] object-cover"/>
-                <img src="/glimpse6.jpeg" className="w-[30vw] max-[800px]:w-[90vw] max-[1000px]:w-[45vw] h-[500px] object-cover"/>
+                <img src="/glimpse1.jpeg" className="w-[30vw] hover:-translate-y-3 transform-transition duration-300 max-[800px]:w-[90vw] max-[1000px]:w-[45vw] h-[500px] object-cover"/>
+                <img src="/glimpse2.jpeg" className="w-[30vw] hover:-translate-y-3 transform-transition duration-300 max-[800px]:w-[90vw] max-[1000px]:w-[45vw] h-[500px] object-cover"/>
+                <img src="/glimpse3.jpeg" className="w-[30vw] hover:-translate-y-3 transform-transition duration-300 max-[800px]:w-[90vw] max-[1000px]:w-[45vw] h-[500px] object-cover"/>
+                 <img src="/glimpse4.jpeg" className="w-[30vw] hover:-translate-y-3 transform-transition duration-300 max-[800px]:w-[90vw] max-[1000px]:w-[45vw] h-[500px] object-cover"/>
+                <img src="/glimpse5.jpeg" className="w-[30vw] hover:-translate-y-3 transform-transition duration-300 max-[800px]:w-[90vw] max-[1000px]:w-[45vw] h-[500px] object-cover"/>
+                <img src="/glimpse6.jpeg" className="w-[30vw] hover:-translate-y-3 transform-transition duration-300 max-[800px]:w-[90vw] max-[1000px]:w-[45vw] h-[500px] object-cover"/>
             </div>
 
                                 

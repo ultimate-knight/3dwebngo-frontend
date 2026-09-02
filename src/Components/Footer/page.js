@@ -1,4 +1,4 @@
-
+"use client"
 
 import {
   
@@ -10,7 +10,9 @@ import {
   
   
 } from "react-icons/fa";
+import axios from "axios";
 import { MapPin,PhoneCallIcon,MessageSquare } from 'lucide-react';
+import { useState,useEffect } from "react";
 
 import Link from "next/link";
 
@@ -19,8 +21,38 @@ import Link from "next/link";
 
 
 export default function Footer(){
+  const [news,setNews]=useState({email:""})
+  const [loading,setloading]=useState(false)
+  const [stator,setStator]=useState("")
+  const [texter,setTexter]=useState("Subscribe")
+
+  function newsupdate(e){
+    e.preventDefault()
+
+    if(!news.email.trim()){
+      return
+    }
+    setloading(true)
+
+    axios.post("http://localhost:9000/newsletter",{
+      email:news.email
+    }).then(response=>{
+      setNews({email:""})
+      setStator("You are subscribed successfully")
+    }).catch(error=>{
+      setStator(error.response.data.message)
+      setNews({email:""})
+      console.log("error",error.message)
+    }).finally(()=>{
+      setloading(false)
+      setTimeout(()=>setStator(""),3000)
+    })
+
+      
+    }
+  
   return (
-    <div className="w-full flex  tracking-widest max-[900px]:flex-col max-[900px]:gap-20  justify-center w-full items-start  p-10 max-[900px]:p-5  min-h-[400px] mt-20 bg-blue-950">
+    <div className="w-full flex  tracking-widest break-words mt-auto max-[900px]:flex-col max-[900px]:gap-20  justify-center  items-start  p-10 max-[900px]:p-5  min-h-[400px] mt-20 bg-blue-950">
           <div className="flex w-[25vw] max-[900px]:mt-10 max-[900px]:order-1 h-auto flex-col gap-6">
             <div className="flex gap-5  items-center">
               <img src="/images2.jpeg" className="rounded-tr-4xl w-[70px] max-[900px]:w-[80px]"/>
@@ -30,19 +62,22 @@ export default function Footer(){
             <p className="w-[30vw] max-[900px]:w-[90vw]">CNI REG NO: U85499TS2026NPL220500</p>
               <p className="w-[30vw] max-[900px]:w-[90vw]">DARPAN ID: TS/2026/1176375</p>
              <div className="flex gap-3">
-                           <p className="bg-blue-600 p-3 rounded-lg"><FaFacebookF/></p>
-                  <p className="bg-blue-600 p-3 rounded-lg bg-pink-300"><FaInstagram/></p>
-                  <p className="bg-blue-600 p-3 rounded-lg"><FaTwitter/></p>
-                  <p className="bg-red-600 p-3 rounded-lg"><FaYoutube/></p>
-                  <p className="bg-blue-600 p-3 rounded-lg"><FaLinkedinIn/></p>
+                           <Link className="hover:-translate-y-3 transform:transition duration-300 cursor-pointer" href="https://www.facebook.com/share/17i8pDvytw/"><p className="bg-blue-600 p-3 rounded-lg"><FaFacebookF/></p></Link>
+                  <Link className="hover:-translate-y-3 transform:transition duration-300 cursor-pointer" href="https://www.instagram.com/3dwebsoft_foundation"><p className="bg-blue-600 p-3 rounded-lg bg-pink-300"><FaInstagram/></p></Link>
+                  <p className="bg-blue-600 cursor-pointer hover:-translate-y-3 transform:transition duration-300 p-3 rounded-lg"><FaTwitter/></p>
+                  <p className="bg-red-600 cursor-pointer hover:-translate-y-3 transform:transition duration-300 p-3 rounded-lg"><FaYoutube/></p>
+                  <p className="bg-blue-600 cursor-pointer hover:-translate-y-3 transform:transition duration-300 p-3 rounded-lg"><FaLinkedinIn/></p>
                       </div>
                       
                       <div className="flex flex-col gap-3">
                         <p className="font-semibold max-[900px]:w-[90vw]">Subscribe to our newsletter</p>
-                        <div className="flex gap-5">
-                          <input placeholder="enter your email" className="rounded-lg p-2 text-gray-700 bg-white"/>
-                          <button className="w-fit p-2  rounded-lg text-white bg-[#06896B]">Subscribe</button>
-                        </div>
+                        
+                        <form onSubmit={newsupdate} className="flex gap-5">
+                          <input type="text" value={news.email} onChange={(e)=>setNews({...news,email:e.target.value})} placeholder="enter your email" className="rounded-lg p-2 text-gray-700 bg-white" required/>
+
+                          <button type="submit" className="w-fit p-2 hover:-translate-y-3 transform:transition duration-300 cursor-pointer  rounded-lg text-white bg-[#06896B]">{loading===true?"Subscribing...":texter}</button>
+                        </form>
+                        {stator && <p className="text-green-500 font-bold">{stator}</p>}
                         
                       </div>
           </div>

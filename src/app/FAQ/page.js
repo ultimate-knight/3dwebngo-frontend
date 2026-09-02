@@ -12,27 +12,27 @@ export default function FAQ() {
     
     
   return (
-    <div className="flex flex-col flex-1 gap-0 tracking-widest leading-loose  items-center overflow-x-hidden cursor-pointer min-h-screen justify-center bg-white font-sans">
+    <div className="flex flex-col flex-1 transition-all duration-300 gap-0 tracking-widest leading-loose  items-center overflow-x-hidden cursor-pointer min-h-screen justify-center bg-white font-sans">
           {/* overhead bar */}
           <Overheadbar/>
           
           {/* main */}
-          <div className="flex flex-col   w-full items-center  justify-center  text-white ">
+          <div className="flex flex-col    w-full items-center  justify-center  text-white ">
             <div className="p-10 font-sans text-white">                      
                     <div className="w-[90vw] bg-[#06896B] flex flex-col items-center justify-center gap-6 max-[887px]:mt-20 min-h-[300px] p-5 rounded-2xl">
                         <p className="font-extrabold text-4xl tracking-widest uppercase max-[500px]:text-2xl">3DWEBSOFT Foundation FAQ</p>
                         <p className="text-xl text-center w-[80vw] max-[500px]:text-sm text-left">Find answers to common questions about 3DWEBSOFT Foundation's programs and how we support community empowerment in India.</p>
                         <div className="flex flex-col gap-1">
-                            <div onClick={()=>setState(state==="computer"?"":"computer")} className="flex justify-between transform-transition duration-500 rounded-lg text-xl font-semibold w-[80vw] p-3 bg-green-950 min-min-h-[50px]">
-                                <p className="max-[500px]:text-sm">What computer training do you offer?</p>
+                            <div onClick={()=>setState(state==="computer"?"":"computer")} className="flex transition-all duration-300 justify-between transform-transition duration-500 rounded-lg text-xl font-semibold w-[80vw] p-3 bg-green-950 min-min-h-[50px]">
+                                <p className="max-[500px]:text-sm transition-all duration-300">What computer training do you offer?</p>
                                 {state==="computer"?<ChevronUp/>:<ChevronDown/>}
                             </div>
                             {state==="computer" && (
-                                <div className="flex justify-between rounded-lg text-xl min-min-h-[100px] font-semibold w-[80vw] p-3  ">
+                                <div className="flex  justify-between rounded-lg text-xl min-min-h-[100px] font-semibold w-[80vw] p-3  ">
                                     <p className="max-[500px]:text-sm">Our computer training programs cover basic to advanced digital skills suitable for all age groups, focusing on practical knowledge for employment.</p>
                                 </div>
                             )}
-                           <div onClick={()=>setState(state==="work"?"":"work")} className="flex justify-between rounded-lg text-xl font-semibold w-[80vw] p-3 bg-green-950 min-h-[50px]">
+                           <div onClick={()=>setState(state==="work"?"":"work")} className={`flex justify-between rounded-lg text-xl font-semibold w-[80vw] p-3 bg-green-950 min-h-[50px] `}>
                                 <p className="max-[500px]:text-sm">How does the employment support work?</p>
                                  {state==="work"?<ChevronUp/>:<ChevronDown/>}
                             </div>

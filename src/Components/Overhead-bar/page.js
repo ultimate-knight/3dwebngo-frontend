@@ -69,37 +69,39 @@
      
  
  return (
- <div className="flex flex-col z-80 gap-5 top-0 h-64  min-w-screen p-5 ">
-                <div className="bg-white w-full h-32 flex max-[887px]:flex-col max-[887px]:h-64 gap-20 max-[887px]:gap-5 items-center justify-center">
+ <div className="flex flex-col transform:transition duration-300 z-80 gap-5 top-0 h-64  min-w-screen p-5 ">
+                <div className="bg-white w-full h-32 flex max-[1066px]:flex-col max-[1066px]:h-64 gap-20 max-[1066px]:gap-5 items-center justify-center">
                       <div className="flex gap-4 max-[887px]:grid max-[887px]:grid-cols-2 max-[887px]:gap-x-10 max-[887px]:place-items-center ">
-                        <Link href="/Contact"><button className="border-1 cursor-pointer border-white bg-[#06896B] text-white font-bold rounded-full py-2 text-sm px-7">Volunteer</button></Link>
-                        <Link href="/Donate"><button className="border-1 cursor-pointer border-white bg-[#06896B] text-white font-bold rounded-full py-2 text-sm px-7">Donate</button></Link>
-                        <Link href="/Learn"><button className="border-1 border-white bg-[#06896B] text-white font-bold rounded-full py-2 px-7 text-sm">Learn-Lms</button></Link>
-                        <Link href="https://www.3DWEBSOFTitsolutions.com/careers.html" className="border-1 border-white bg-[#06896B] text-white font-bold text-sm rounded-full py-2 px-7">Join-Us</Link>
+                        <Link className="hover:-translate-y-3 transform:transition duration-300" href="/Contact"><button className="border-1 cursor-pointer border-white bg-[#06896B] text-white font-bold rounded-full py-3 text-sm px-7">Volunteer</button></Link>
+                        <Link className="hover:-translate-y-3 transform:transition duration-300" href="/Donate"><button className="border-1 cursor-pointer border-white bg-[#06896B] text-white font-bold rounded-full py-3 text-sm px-7">Donate</button></Link>
+                        <Link className="hover:-translate-y-3 transform:transition duration-300" href="/Learn"><button className="border-1 border-white bg-[#06896B] text-white font-bold cursor-pointer rounded-full py-3 px-7 text-sm">Learn-Lms</button></Link>
+                        <Link  href="https://www.3DWEBSOFTitsolutions.com/careers.html" className="border-1 hover:-translate-y-3 transform:transition duration-300 border-white bg-[#06896B] text-white font-bold text-sm rounded-full py-3 px-7">Join-Us</Link>
                       </div>
-                      <div className="flex gap-3">
-                           <Link href="https://www.facebook.com/share/17i8pDvytw/"><p className="bg-blue-600 p-3 rounded-lg"><FaFacebookF/></p></Link>
-                  <Link href="https://www.instagram.com/3dwebsoft_foundation"><p className="bg-blue-600 p-3 rounded-lg bg-pink-300"><FaInstagram/></p></Link>
-                  <p className="bg-blue-600 p-3 rounded-lg"><FaTwitter/></p>
-                  <p className="bg-red-600 p-3 rounded-lg"><FaYoutube/></p>
-                  <p className="bg-blue-600 p-3 rounded-lg"><FaLinkedinIn/></p>
+                      <div className="flex gap-3 transform:transition duration-300">
+                           <Link className="hover:-translate-y-3 transform:transition duration-300" href="https://www.facebook.com/share/17i8pDvytw/"><p className="bg-blue-600 p-3 rounded-lg"><FaFacebookF/></p></Link>
+                  <Link className="hover:-translate-y-3 transform:transition duration-300" href="https://www.instagram.com/3dwebsoft_foundation"><p className="bg-blue-600  p-3 rounded-lg bg-pink-300"><FaInstagram/></p></Link>
+                  <p className="bg-blue-600 cursor-pointer p-3 rounded-lg hover:-translate-y-3 transform:transition duration-300"><FaTwitter/></p>
+                  <p className="bg-red-600 p-3 cursor-pointer rounded-lg hover:-translate-y-3 transform:transition duration-300"><FaYoutube/></p>
+                  <p className="bg-blue-600 p-3 cursor-pointer rounded-lg hover:-translate-y-3 transform:transition duration-300"><FaLinkedinIn/></p>
                       </div>
+                      <Link href="/Login" className="bg-[#06896B] py-2 px-7 rounded-full hover:-translate-y-3 transform:transition duration-300 text-white rounded-2xl    text-center font-semibold max-[700px]:hidden">Admin</Link>
                 </div>
-                 <div className={`flex justify-start gap-20 p-5 items-center bg-[#06896B] min-w-screen h-28`}>
-                      <img src="/images2.jpeg"  className="pl-20 max-[1040px]:-ml-20 h-28 w-[270px]"/>
-                      <div ref={mobileref} className="min-[1040px]:hidden  flex flex-col items-center justify-center">
+                 <div className={`flex justify-start gap-20 p-5 items-center bg-[#06896B] min-w-screen h-36`}>
+                      <img src="/images2.jpeg"  className="pl-20 max-[1060px]:-ml-20 h-36  w-[270px]"/>
+                      <div ref={mobileref} className="min-[1060px]:hidden  flex flex-col items-center justify-center">
                         {ham===true?<MenuIcon onClick={()=>setHam((prev)=>!prev)} size={50} className="absolute right-10"/>:<XIcon onClick={()=>setHam((prev)=>!prev)} size={50} className="absolute right-10"/>}
                           {ham===false && (
-                             <div className="flex gap-10 mt-30    max-[1040px]:flex-col  max-[1040px]:absolute max-[1040px]:right-0 max-[1040px]:mt-[600px] max-[1040px]:bg-[#06896B] max-[1040px]:w-[300px] max-[1040px]:items-start max-[1040px]:p-7">
+                             <div className="flex gap-10 mt-30    max-[1060px]:flex-col  max-[1060px]:absolute max-[1060px]:right-0 max-[1060px]:mt-[600px] max-[1060px]:bg-[#06896B] max-[1060px]:w-[300px] max-[1060px]:items-start max-[1060px]:p-7">
                           
                           <Link onClick={()=>{setActive("home"),setHam(true),setHover(null)}} onMouseLeave={()=>setState(null)} onMouseEnter={()=>setState("home")} href="/" className={`uppercase relative font-bold after:absolute after:bg-white after:h-1 after:w-16 after:left-0 ${state==="home" || active==="home"?"after:block":"after:hidden"}`}>Home</Link>
+                          
                          
                           
                            
                           <Link onClick={()=>{setActive("about"),setHam(true)
           ,setHover(null)}} onMouseLeave={()=>setState(null)} onMouseEnter={()=>{setState("about"); setHover("about")}} href="/About" className={`uppercase relative font-bold after:absolute after:bg-white after:h-1 after:w-24 after:left-0 ${state==="about" || active==="about"?"after:block":"after:hidden"}`}>about us</Link>
                           
-                           
+                        
                           <Link onClick={()=>setActive(active==="programs"?"":"programs")} href="" className={`uppercase relative font-bold after:absolute after:bg-white after:h-1 after:w-28 after:left-0 ${state==="programs" || active==="programs"?"after:block":"after:hidden"}`}>programs</Link>
                            {active==="programs" && (
                             <div  className="flex flex-col gap-3 rounded-lg p-1   w-[300px]  bg-[#06896B]">
@@ -132,6 +134,8 @@
                             </div>
                           )}
 
+                          
+
                          
                           <div className="flex flex-col gap-2">
                           <Link onClick={()=>{setActive("contact"),setHam(true),setHover(null)}} onMouseLeave={()=>setState(null)} onMouseEnter={()=>setState("contact")} href="/Contact" className={`uppercase relative font-bold after:absolute after:bg-white after:h-1 after:w-28 after:ml-0 after:left-0 ${state==="contact" || active==="contact"?"after:block":"after:hidden"}`}>contact us</Link>
@@ -146,9 +150,11 @@
 
                           )}
                       </div>
-                      <div className="flex gap-10 max-[1040px]:hidden max-[1040px]:flex-col">
+                      <div className="flex gap-10 max-[1060px]:hidden max-[1060px]:flex-col">
                           
                           <Link onClick={()=>setActive("home")} onMouseLeave={()=>setState(null)} onMouseEnter={()=>setState("home")} href="/" className={`uppercase relative font-bold after:absolute after:bg-white after:h-1 after:w-16 after:left-0 ${state==="home" || active==="home"?"after:block":"after:hidden"}`}>Home</Link>
+
+                          
                          
                           
                            

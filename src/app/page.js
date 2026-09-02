@@ -54,7 +54,7 @@ export default function App() {
           text: "3DWEBSOFT Foundation’s Digital Literacy initiative works to empower rural and underserved communities by providing essential digital skills, access to technology, and opportunities for technology-based learning.",
         },
         {
-          image: "/rubaler.jpg",
+          image: "/computerator.jpeg",
           heading: "Computer Training Programs",
           text: "3DWEBSOFT Foundation’s Computer Training Programs are designed to equip individuals with essential digital and computer skills that can support their education, employment, and everyday professional activities.",
         },
@@ -111,7 +111,7 @@ export default function App() {
               <div className="grid grid-cols-2 max-[750px]:grid-cols-1 justify-items-center  gap-5 p-5">
                 <div className="flex flex-col gap-3">
                   <p className="text-3xl font-semibold text-gray-600 max-[500px]:text-2xl">Computer Training Programs</p>
-            <div className="group w-[45vw] max-[750px]:w-[90vw] h-[500px] [perspective:1000px]">
+            <div className="group w-[40vw] max-[750px]:w-[90vw] h-[500px] [perspective:1000px]">
   
   
   
@@ -137,7 +137,7 @@ export default function App() {
 
       <div className="flex flex-col gap-3">
                   <p className="text-3xl font-semibold text-gray-600 max-[500px]:text-2xl">Web Designing & Development</p>
-      <div class="group w-[45vw] h-[500px] max-[750px]:w-[90vw] [perspective:1000px]">
+      <div className="group w-[40vw] h-[500px] max-[750px]:w-[90vw] [perspective:1000px]">
   
   
   
@@ -159,11 +159,11 @@ export default function App() {
     </div>
       <div className="flex flex-col gap-3">
                   <p className="text-3xl font-semibold text-gray-600 max-[500px]:text-2xl">Full Stack Development</p>
-      <div class="group  w-[45vw] h-[500px] max-[750px]:w-[90vw] [perspective:1000px]">
+      <div className="group  w-[40vw] h-[500px] max-[750px]:w-[90vw] [perspective:1000px]">
   
   
   
-  <div class="relative h-full w-full rounded-2xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+  <div className="relative h-full w-full rounded-2xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
     
     
     <div className="absolute inset-0 h-full w-full rounded-2xl bg-gradient-to-br from-purple-600 to-indigo-600 text-white [backface-visibility:hidden]">
@@ -171,9 +171,9 @@ export default function App() {
     </div>
 
     
-    <div class="absolute flex flex-col gap-6 inset-0 h-full w-full rounded-2xl bg-slate-900 p-6 text-white [backface-visibility:hidden] [transform:rotateY(180deg)]">
+    <div className="absolute flex flex-col gap-6 inset-0 h-full w-full rounded-2xl bg-slate-900 p-6 text-white [backface-visibility:hidden] [transform:rotateY(180deg)]">
                             <p>The Full Stack Development program helps learners build comprehensive technical skills across frontend and backend development. Practical projects and coding experience help participants develop job-ready technology skills.</p>
-                            <button className="w-fit p-2 rounded-lg border-2 border-white ">Know More</button>
+                           <Link href="/Contact"><button className="w-fit p-2 rounded-lg border-2 border-white ">Know More</button></Link>
     </div>
     </div>
     
@@ -181,7 +181,7 @@ export default function App() {
     </div>
     <div className="flex flex-col gap-3">
                   <p className="text-3xl font-semibold text-gray-600 max-[500px]:text-2xl">Digital Literacy in Rural Areas</p>
-      <div class="group  w-[45vw] h-[500px] max-[750px]:w-[90vw] [perspective:1000px]">
+      <div class="group  w-[40vw] h-[500px] max-[750px]:w-[90vw] [perspective:1000px]">
   
   
   
@@ -195,7 +195,7 @@ export default function App() {
     
     <div class="absolute inset-0 flex flex-col gap-6 h-full w-full rounded-2xl bg-slate-900 p-6 text-white [backface-visibility:hidden] [transform:rotateY(180deg)]">
                               <p>The Digital Literacy initiative aims to provide rural communities with essential digital skills and access to technology-based learning. The program works toward reducing the digital divide and improving digital inclusion.</p>
-                            <button className="w-fit p-2 rounded-lg border-2 border-white ">Know More</button>
+                            <Link href="/Contact"><button className="w-fit p-2 rounded-lg border-2 border-white ">Know More</button></Link>
     </div>
     </div>
     
@@ -203,7 +203,7 @@ export default function App() {
     </div>
       <div className="flex flex-col gap-3">
                   <p className="text-3xl font-semibold text-gray-600 max-[500px]:text-2xl">Job Drives</p>
-      <div class="group  w-[45vw] h-[500px] max-[750px]:w-[90vw] [perspective:1000px]">
+      <div class="group  w-[40vw] h-[500px] max-[750px]:w-[90vw] [perspective:1000px]">
   
   
   
@@ -217,14 +217,14 @@ export default function App() {
     
     <div class="absolute flex flex-col gap-6 inset-0 h-full w-full rounded-2xl bg-slate-900 p-6 text-white [backface-visibility:hidden] [transform:rotateY(180deg)]">
                           <p>Job Drives provide candidates with opportunities to interact directly with employers and participate in recruitment processes. These initiatives help connect trained individuals with potential employment opportunities.</p>
-                            <button className="w-fit p-2 rounded-lg border-2 border-white ">Know More</button>
+                            <Link href="/Contact"><button className="w-fit p-2 rounded-lg border-2 border-white ">Know More</button></Link>
     </div>
     </div>
     
     </div>
     </div><div className="flex flex-col gap-3">
                   <p className="text-3xl font-semibold text-gray-600 max-[500px]:text-3xl">Women Empowerment Programs</p>
-      <div class="group  w-[45vw] h-[500px]  max-[750px]:w-[90vw]  [perspective:1000px]">
+      <div class="group  w-[40vw] h-[500px]  max-[750px]:w-[90vw]  [perspective:1000px]">
   
   
   
@@ -240,7 +240,7 @@ export default function App() {
     
     <div class="absolute inset-0 h-full flex flex-col gap-5 w-full rounded-2xl bg-slate-900 p-6 text-white [backface-visibility:hidden] [transform:rotateY(180deg)]">
                               <p>3DWEBSOFT Foundation conducts women-focused skill development programs including tailoring, beauty parlour training, handicrafts, and home-business support. These programs are designed to encourage self-employment, entrepreneurship, and financial independence.</p>
-                            <button className="w-fit p-2 rounded-lg border-2 border-white ">Know More</button>    
+                            <Link href="/Contact"><button className="w-fit cursor-pointer p-2 rounded-lg border-2 border-white ">Know More</button></Link>
     </div>
     </div>
     
@@ -277,7 +277,7 @@ export default function App() {
     <p className="text-left w-[35vw] text-gray-800 max-[1108px]:w-[90vw]">Your time, support, participation, and contribution can play a significant role in 3DWEBSOFT Foundation's efforts to empower individuals and strengthen communities.</p>
      <p className="text-left w-[35vw]  text-gray-800 max-[1108px]:w-[90vw]">Together, we can help create opportunities through education, skills, employment, and community development.</p>
      </div>
-     <button className="bg-[#06896B] w-28 py-4 font-semibold rounded-lg hover:scale-105 cursor-pointer">Donate now</button>
+     <Link href="/"><button className="bg-[#06896B] w-28 py-4 font-semibold rounded-lg hover:scale-105 cursor-pointer">Donate now</button></Link>
   </div>
 
 </div>

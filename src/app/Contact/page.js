@@ -1,20 +1,88 @@
 "use client"
 import Image from "next/image";
+import axios from "axios";
 import { useState,useEffect } from "react";
+import Toastify from "toastify";
 import Footer from "@/Components/Footer/page";
 import Overheadbar from "@/Components/Overhead-bar/page";
 import Link from "next/link";
 import MapEmbed from "@/Components/MapEmbed/page";
-import { ChevronDown,ChevronRight,ChevronLeft, DivideCircle,Check } from "lucide-react";
+import { ChevronDown,ChevronRight,ChevronLeft, DivideCircle,Check, TrendingUpIcon } from "lucide-react";
 
 export default function Contact() {
     const [state,setState]=useState("")
+    const [partnerfalse,setPartnerfalse]=useState(false)
+    const [admissionfalse,setAdmissionfalse]=useState(false)
+    const [ngofalse,setNgofalse]=useState(false)
+    const [volunteerfalse,setVolunteerFalse]=useState(false)
     const [partnershipType, setPartnershipType] = useState("")
     const [coursePreference, setCoursePreference] = useState("")
     const [Area, setArea] = useState("")
+     
 
-    const handleChange=(e)=>{
-        setState(e.target.value)
+    const [part,setPart]=useState({partnership:"",Name:"",phone:"",email:"",company:"",remarks:""})
+    const [adm,setAdm]=useState({student:"",contact:"",email:"",remarks:"",city:"",course:""})
+    const [nger,setNger]=useState({ngo:"",name:"",contact:"",city:"",email:"",remarks:""})
+    // state,volunteer,contact,email,city,area
+    const [voluntr,setVoluntr]=useState({state:"",volunteer:"",contact:"",email:"",city:"",area:""})
+    
+
+
+    function handlePart(e){
+        e.preventDefault()
+        setPartnerfalse(true)
+        axios.post("http://localhost:9000/partnership",{
+            partnership:part.partnership,
+            Name:part.Name,
+            phone:part.phone,
+            email:part.email,
+            company:part.company,
+            remarks:part.remarks
+
+        }).then(()=>{setTimeout(()=>{setPartnerfalse(false)},3000),setPart({partnership:"",Name:"",phone:"",email:"",company:"",remarks:""});Toastify.success("partnership added successfully")}).catch(error=>{console.log("error",error.message);Toastify.error("error occured in partnership")})
+
+
+    }
+
+    function handleAdm(e){
+        e.preventDefault()
+        setAdmissionfalse(true)
+        axios.post("http://localhost:9000/admission",{
+            student:adm.student,
+            contact:adm.contact,
+            email:adm.email,
+            remarks:adm.remarks,
+            city:adm.city,
+            course:adm.course
+        }).then(()=>{setTimeout(()=>{setAdmissionfalse(false)},3000),setAdm({student:"",contact:"",email:"",remarks:"",city:"",course:""})}).catch(error=>console.log("error",error.message))
+    }
+
+    function handleNgo(e){
+        e.preventDefault()
+        setNgofalse(true)
+        axios.post("http://localhost:9000/ngo",{
+            ngo:nger.ngo,
+            name:nger.name,
+            contact:nger.contact,
+            city:nger.city,
+            email:nger.email,
+            remarks:nger.remarks
+        }).then(()=>{setTimeout(()=>{setNgofalse(false)},3000),setNger({ngo:"",name:"",contact:"",city:"",email:"",remarks:""})}).catch(error=>console.log("error",error.message))
+        
+    }
+
+    function handleVolunteer(e){
+        e.preventDefault()
+        setVolunteerFalse(true)
+        axios.post("http://localhost:9000/volunteer",{
+            state:voluntr.state,
+            volunteer:voluntr.volunteer,
+            contact:voluntr.contact,
+            email:voluntr.email,
+            city:voluntr.city,
+            area:voluntr.area
+        }).then(()=>{setTimeout(()=>{setVolunteerFalse(false)},3000),setVoluntr({state:"",volunteer:"",contact:"",email:"",city:"",area:""})}).catch(error=>console.log("error",error.message))
+        
     }
 
     
@@ -55,13 +123,12 @@ export default function Contact() {
               </div>
               <div className="flex flex-col items-center  pt-20 gap-8">
                 <p className="text-[#06896b] font-semibold italic text-4xl  max-[500px]:text-2xl">For Partnerships:</p>
-                <div className="grid grid-cols-3 max-[900px]:grid-cols-1  gap-x-5 gap-y-5">
+                <form onSubmit={handlePart} className="grid grid-cols-3  max-[900px]:grid-cols-1  gap-x-5 gap-y-5">
                     <select
-                        value={state}
-                        name="Type of partnership"
-                        onChange={handleChange}
+                        value={part.partnership}
+                        onChange={(e)=>setPart({...part,partnership:e.target.value})}
                         className="w-[25vw] max-[900px]:w-[90vw] h-[50px]  max-[500px]:text-sm text-center border rounded-lg border-gray-800"
-                    >
+                    required>
                         <option value="" disabled>
                             Select type of partnership
                         </option>
@@ -69,83 +136,90 @@ export default function Contact() {
                         <option value="csr project for implementation">csr project for implementation</option>
                         <option value="others">others</option>
                     </select>
-                    <input placeholder="Contact Person Name" className="w-[25vw]  max-[500px]:text-sm max-[900px]:w-[90vw]  h-[50px] text-center border rounded-lg border-gray-800"/>
-                    <input placeholder="Contact Number" className="w-[25vw]  max-[500px]:text-sm max-[900px]:w-[90vw] h-[50px] text-center border rounded-lg border-gray-800"/>
-                    <input placeholder="Email Id" className="w-[25vw]  max-[500px]:text-sm max-[900px]:w-[90vw] h-[50px] text-center border rounded-lg border-gray-800"/>
-                    <input placeholder="Company Name" className="w-[25vw]  max-[500px]:text-sm max-[900px]:w-[90vw] h-[50px] text-center border rounded-lg border-gray-800"/>
-                    <input placeholder="Remarks" className="w-[25vw]  max-[500px]:text-sm max-[900px]:w-[90vw] h-[50px] text-center border rounded-lg border-gray-800"/>
-                </div>
-                <button className="w-fit px-4 py-2 rounded-lg text-white bg-[#06996b]">Submit</button>
+                    <input value={part.Name} onChange={(e)=>setPart({...part,Name:e.target.value})} placeholder="Contact Person Name" className="w-[25vw]  max-[500px]:text-sm max-[900px]:w-[90vw]  h-[50px] text-center border rounded-lg border-gray-800" required/>
+                    <input value={part.phone} onChange={(e)=>setPart({...part,phone:e.target.value})} placeholder="Contact Number" className="w-[25vw]  max-[500px]:text-sm max-[900px]:w-[90vw] h-[50px] text-center border rounded-lg border-gray-800" required/>
+                    <input value={part.email} onChange={(e)=>setPart({...part,email:e.target.value})} placeholder="Email Id" className="w-[25vw]  max-[500px]:text-sm max-[900px]:w-[90vw] h-[50px] text-center border rounded-lg border-gray-800" required/>
+                    <input value={part.company} onChange={(e)=>setPart({...part,company:e.target.value})} placeholder="Company Name" className="w-[25vw]  max-[500px]:text-sm max-[900px]:w-[90vw] h-[50px] text-center border rounded-lg border-gray-800" required/>
+                    <input value={part.remarks} onChange={(e)=>setPart({...part,remarks:e.target.value})} size={20} placeholder="Remarks" className="w-[25vw]  max-[500px]:text-sm max-[900px]:w-[90vw] h-[50px] text-center border rounded-lg border-gray-800"/>
+                    
+                     <button type="submit" className="w-fit max-[900px]:col-span-1 col-span-3 justify-self-center hover:scale-110 translate-[50%,50%] cursor-pointer px-4 py-2 rounded-lg text-white bg-[#06996b]">{partnerfalse===false?"Submit":"Submitting..."}</button>
+                     
+                </form>
+               
               </div>
                <div className="flex flex-col items-center  pt-20 gap-8">
                 <p className="text-[#06896b] font-semibold italic text-4xl max-[500px]:text-2xl">For Admission Inquiry:</p>
-                <div className="grid grid-cols-3 max-[900px]:grid-cols-1 gap-x-5 gap-y-5">
+                <form onSubmit={handleAdm} className="grid grid-cols-3 max-[900px]:grid-cols-1 gap-x-5 gap-y-5">
                     <select
-                        value={coursePreference}
+                        value={adm.course}
                         name="Type of partnership"
-                        onChange={(e)=>setCoursePreference(e.target.value)}
+                        onChange={(e)=>setAdm({...adm,course:e.target.value})}
                         className="w-[25vw] max-[900px]:w-[90vw] max-[500px]:text-sm h-[50px] text-center border rounded-lg border-gray-800"
-                    >
+                    required>
                         <option value="" disabled>
                             Course preference
                         </option>
                         <option value="Digital Marketing">Digital Marketing</option>
                         <option value="E-commerce">E-commerce</option>
-                        <option value="Web-Deevelopment">Web-Development</option>
-                        <option value="Voice and Non-voice process">Voice and Non-voice process</option>
+                        <option value="Web-development">Web-Development</option>
+                        <option value="Voice and Non voice process">Voice and Non-voice process</option>
                         <option value="Backend">Backend</option>
                         <option value="Fullstack">Fullstack</option>
-                        <option value="others">others</option>
+                        <option value="Others">others</option>
+                        {/* -- Alter table Admission add course enum("Digital Marketing","E-commerce","Web-development","Voice and Non voice process","Backend","Fullstack","Others"); */}
                     </select>
-                    <input placeholder="City" className="w-[25vw] max-[900px]:w-[90vw] max-[500px]:text-sm h-[50px] text-center border rounded-lg border-gray-800"/>
-                    <input placeholder="Student Name" className="w-[25vw] max-[900px]:w-[90vw] max-[500px]:text-sm h-[50px] text-center border rounded-lg border-gray-800"/>
-                    <input placeholder="Contact Number" className="w-[25vw] max-[900px]:w-[90vw] max-[500px]:text-sm h-[50px] text-center border rounded-lg border-gray-800"/>
-                    <input placeholder="Email-Id" className="w-[25vw] max-[900px]:w-[90vw] h-[50px] max-[500px]:text-sm text-center border rounded-lg border-gray-800"/>
-                    <input placeholder="Remarks" className="w-[25vw] max-[900px]:w-[90vw] h-[50px] max-[500px]:text-sm text-center border rounded-lg border-gray-800"/>
-                </div>
-                <button className="w-fit px-4 py-2 rounded-lg text-white bg-[#06996b]">Submit</button>
+                    <input value={adm.city} onChange={(e)=>setAdm({...adm,city:e.target.value})} placeholder="City" className="w-[25vw] max-[900px]:w-[90vw] max-[500px]:text-sm h-[50px] text-center border rounded-lg border-gray-800" required/>
+                    <input value={adm.student} onChange={(e)=>setAdm({...adm,student:e.target.value})} placeholder="Student Name" className="w-[25vw] max-[900px]:w-[90vw] max-[500px]:text-sm h-[50px] text-center border rounded-lg border-gray-800" required/>
+                    <input value={adm.contact} onChange={(e)=>setAdm({...adm,contact:e.target.value})} placeholder="Contact Number" className="w-[25vw] max-[900px]:w-[90vw] max-[500px]:text-sm h-[50px] text-center border rounded-lg border-gray-800" required/>
+                    <input value={adm.email} onChange={(e)=>setAdm({...adm,email:e.target.value})} placeholder="Email-Id" className="w-[25vw] max-[900px]:w-[90vw] h-[50px] max-[500px]:text-sm text-center border rounded-lg border-gray-800" required/>
+                    <input value={adm.remarks} onChange={(e)=>setAdm({...adm,remarks:e.target.value})} placeholder="Remarks" className="w-[25vw] max-[900px]:w-[90vw] h-[50px] max-[500px]:text-sm text-center border rounded-lg border-gray-800" required/>
+                     <button type="submit" className="w-fit  hover:scale-110 max-[900px]:col-span-1 col-span-3 justify-self-center cursor-pointer px-4 py-2 rounded-lg text-white bg-[#06996b]">{admissionfalse===false?"Submit":"Submitting..."}</button>
+                </form>
+               
               </div>
                <div className="flex flex-col items-center  pt-20 gap-8">
                 <p className="text-[#06896b] font-semibold italic text-4xl max-[500px]:text-2xl">For NGO Partnership:</p>
-                <div className="grid grid-cols-3  max-[900px]:grid-cols-1 gap-x-5 gap-y-5">
-                    <input placeholder="Your NGO Name" className="w-[25vw] max-[900px]:w-[90vw] max-[500px]:text-sm h-[50px] text-center border rounded-lg border-gray-800"/>
-                    <input placeholder="Contact Person Name" className="w-[25vw] max-[900px]:w-[90vw] max-[500px]:text-sm h-[50px] text-center border rounded-lg border-gray-800"/>
-                    <input placeholder="Contact Number" className="w-[25vw] max-[900px]:w-[90vw] h-[50px] max-[500px]:text-sm text-center border rounded-lg border-gray-800"/>
-                    <input placeholder="City" className="w-[25vw] max-[900px]:w-[90vw] h-[50px] text-center max-[500px]:text-sm border rounded-lg border-gray-800"/>
-                    <input placeholder="Email" className="w-[25vw] max-[900px]:w-[90vw] h-[50px] text-center max-[500px]:text-sm border rounded-lg border-gray-800"/>
-                    <input placeholder="Remarks" className="w-[25vw] max-[900px]:w-[90vw] h-[50px] text-center max-[500px]:text-sm border rounded-lg border-gray-800"/>
-                </div>
-                <button className="w-fit px-4 py-2 rounded-lg text-white bg-[#06996b]">Submit</button>
+                <form onSubmit={handleNgo} className="grid grid-cols-3  max-[900px]:grid-cols-1 gap-x-5 gap-y-5">
+                    <input value={nger.ngo} onChange={(e)=>setNger({...nger,ngo:e.target.value})} placeholder="Your NGO Name" className="w-[25vw] max-[900px]:w-[90vw] max-[500px]:text-sm h-[50px] text-center border rounded-lg border-gray-800" required/>
+                    <input value={nger.name} onChange={(e)=>setNger({...nger,name:e.target.value})} placeholder="Contact Person Name" className="w-[25vw] max-[900px]:w-[90vw] max-[500px]:text-sm h-[50px] text-center border rounded-lg border-gray-800" required/>
+                    <input value={nger.contact} onChange={(e)=>setNger({...nger,contact:e.target.value})} placeholder="Contact Number" className="w-[25vw] max-[900px]:w-[90vw] h-[50px] max-[500px]:text-sm text-center border rounded-lg border-gray-800" required/>
+                    <input value={nger.city} onChange={(e)=>setNger({...nger,city:e.target.value})} placeholder="City" className="w-[25vw] max-[900px]:w-[90vw] h-[50px] text-center max-[500px]:text-sm border rounded-lg border-gray-800" required/>
+                    <input value={nger.email} onChange={(e)=>setNger({...nger,email:e.target.value})} placeholder="Email" className="w-[25vw] max-[900px]:w-[90vw] h-[50px] text-center max-[500px]:text-sm border rounded-lg border-gray-800" required/>
+                    <input value={nger.remarks} onChange={(e)=>setNger({...nger,remarks:e.target.value})} placeholder="Remarks" className="w-[25vw] max-[900px]:w-[90vw] h-[50px] text-center max-[500px]:text-sm border rounded-lg border-gray-800" required/>
+                     <button type="submit" className="w-fit  max-[900px]:col-span-1 col-span-3 justify-self-center px-4 py-2 hover:scale-110 cursor-pointer rounded-lg text-white bg-[#06996b]">{ngofalse===false?"Submit":"Submitting..."}</button>
+                </form>
+               
                 
                 
               </div>
                <div className="flex flex-col items-center  pt-20 gap-8">
                 <p className="text-[#06896b] font-semibold italic text-4xl max-[500px]:text-2xl">Be a Volunteer:</p>
-                <div className="grid grid-cols-3  max-[900px]:grid-cols-1 gap-x-5 gap-y-5">
+                <form onSubmit={handleVolunteer} className="grid grid-cols-3  max-[900px]:grid-cols-1 gap-x-5 gap-y-5">
                     <select
-                        value={partnershipType}
+                        value={voluntr.state}
                         name="Type of partnership"
-                        onChange={(e)=>setPartnershipType(e.target.value)}
+                        onChange={(e)=>setVoluntr({...voluntr,state:e.target.value})}
                         className="w-[25vw] max-[900px]:w-[90vw] h-[50px] max-[500px]:text-sm text-center border rounded-lg border-gray-800"
-                    >
+                    required>
                         <option value="" disabled>
                             State
                         </option>
-                        <option value="candidates for placement">Telangana</option>
-                        <option value="csr project for implementation">Maharashtra</option>
-                        <option value="others">Karnataka</option>
+                        <option value="Telangana">Telangana</option>
+                        <option value="Maharashtra">Maharashtra</option>
+                        <option value="Karnataka">Karnataka</option>
                         <option value="others">Others</option>
                     </select>
-                    <input placeholder="Volunteer Name" className="w-[25vw] max-[500px]:text-sm max-[900px]:w-[90vw] h-[50px] text-center border rounded-lg border-gray-800"/>
-                    <input placeholder="Contact Number" className="w-[25vw] max-[500px]:text-sm max-[900px]:w-[90vw] h-[50px] text-center border rounded-lg border-gray-800"/>
-                    <input placeholder="Email Id" className="w-[25vw] max-[500px]:text-sm max-[900px]:w-[90vw] h-[50px] text-center border rounded-lg border-gray-800"/>
-                    <input placeholder="City" className="w-[25vw] max-[500px]:text-sm max-[900px]:w-[90vw] h-[50px] text-center border rounded-lg border-gray-800"/>
+                    <input value={voluntr.volunteer} onChange={(e)=>setVoluntr({...voluntr,volunteer:e.target.value})}  placeholder="Volunteer Name" className="w-[25vw] max-[500px]:text-sm max-[900px]:w-[90vw] h-[50px] text-center border rounded-lg border-gray-800" required/>
+                    <input value={voluntr.contact} onChange={(e)=>setVoluntr({...voluntr,contact:e.target.value})} placeholder="Contact Number" className="w-[25vw] max-[500px]:text-sm max-[900px]:w-[90vw] h-[50px] text-center border rounded-lg border-gray-800" required/>
+                    <input value={voluntr.email} onChange={(e)=>setVoluntr({...voluntr,email:e.target.value})} placeholder="Email Id" className="w-[25vw] max-[500px]:text-sm max-[900px]:w-[90vw] h-[50px] text-center border rounded-lg border-gray-800" required/>
+                    <input value={voluntr.city} onChange={(e)=>setVoluntr({...voluntr,city:e.target.value})} placeholder="City" className="w-[25vw] max-[500px]:text-sm max-[900px]:w-[90vw] h-[50px] text-center border rounded-lg border-gray-800" required/>
                     <select
-                        value={Area}
+                        
                         name="Type of partnership"
-                        onChange={(e)=>setArea(e.target.value)}
+                        value={voluntr.area}
+                        onChange={(e)=>setVoluntr({...voluntr,area:e.target.value})}
                         className="w-[25vw] max-[900px]:w-[90vw] max-[500px]:text-sm h-[50px] text-center border rounded-lg border-gray-800"
-                    >
+                    required>
                         <option value="" disabled>
                             Area of Interest
                         </option>
@@ -158,8 +232,9 @@ export default function Contact() {
                         <option value="Content Writing">Content Writing</option>
                         <option value="others">Others</option>
                     </select>
-                </div>
-                <button className="w-fit px-4 py-2 rounded-lg text-white bg-[#06996b]">Submit</button>
+                     <button type="submit" className="w-fit max-[900px]:col-span-1 col-span-3 justify-self-center hover:scale-110 cursor-pointer px-4 py-2 rounded-lg text-white bg-[#06996b]">{volunteerfalse===false?"Submit":"Submitting..."}</button>
+                </form>
+               
                 
                 
               </div>
