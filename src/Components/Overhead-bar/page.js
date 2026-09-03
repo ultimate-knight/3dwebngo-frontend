@@ -30,6 +30,10 @@
     
       const showdisplay=hover || display
 
+      const text="3DWEBSOFT Foundation is a non-profit organization incorporated under Section 8 of the Companies Act, 2013 and registered with the Government of India.The Foundation is committed to transforming lives through education, skill development, employment support, women empowerment, digital literacy, healthcare awareness, and community development.3DWEBSOFT Foundation is a non-profit organization incorporated under Section 8 of the Companies Act, 2013 and registered with the Government of India.The Foundation is committed to transforming lives through education, skill development, employment support, women empowerment, digital literacy, healthcare awareness, and community development."
+
+      const partnerText=[...text,...text]
+
     useEffect(()=>{
       if(!pathname) return
        setHam(true);
@@ -76,7 +80,9 @@
                         <Link className="hover:-translate-y-3 transform:transition duration-300" href="/Donate"><button className="border-1 cursor-pointer border-white bg-[#06896B] text-white font-bold rounded-full py-3 text-sm px-7">Donate</button></Link>
                         <Link className="hover:-translate-y-3 transform:transition duration-300" href="/Learn"><button className="border-1 border-white bg-[#06896B] text-white font-bold cursor-pointer rounded-full py-3 px-7 text-sm">Learn-Lms</button></Link>
                         <Link  href="https://www.3DWEBSOFTitsolutions.com/careers.html" className="border-1 hover:-translate-y-3 transform:transition duration-300 border-white bg-[#06896B] text-white font-bold text-sm rounded-full py-3 px-7">Join-Us</Link>
+                        
                       </div>
+                      
                       <div className="flex gap-3 transform:transition duration-300">
                            <Link className="hover:-translate-y-3 transform:transition duration-300" href="https://www.facebook.com/share/17i8pDvytw/"><p className="bg-blue-600 p-3 rounded-lg"><FaFacebookF/></p></Link>
                   <Link className="hover:-translate-y-3 transform:transition duration-300" href="https://www.instagram.com/3dwebsoft_foundation"><p className="bg-blue-600  p-3 rounded-lg bg-pink-300"><FaInstagram/></p></Link>
@@ -86,6 +92,7 @@
                       </div>
                       <Link href="/Login" className="bg-[#06896B] py-2 px-7 rounded-full hover:-translate-y-3 transform:transition duration-300 text-white rounded-2xl    text-center font-semibold max-[700px]:hidden">Admin</Link>
                 </div>
+                
                  <div className={`flex justify-start gap-20 p-5 items-center bg-[#06896B] min-w-screen h-36`}>
                       <img src="/images2.jpeg"  className="pl-20 max-[1060px]:-ml-20 h-36  w-[270px]"/>
                       <div ref={mobileref} className="min-[1060px]:hidden  flex flex-col items-center justify-center">
@@ -133,6 +140,7 @@
                                   <Link href="/Blog"><p onClick={()=>{setHover(null)}} className="font-semibold cursor-pointer p-2 hover:hover:bg-green-950 hover:rounded-lg">Blogs</p></Link>
                             </div>
                           )}
+                          
 
                           
 
@@ -173,6 +181,7 @@
                           )}
                           
                           
+                          
                           <Link onClick={()=>setActive("partners")} onMouseLeave={()=>setState(null)} onMouseEnter={()=>{setState("partners"); setHover("partners")}} href="" className={`uppercase relative font-bold after:absolute after:bg-white after:h-1 after:w-28 after:-left-1 ${state==="partners" || active==="partners"?"after:block":"after:hidden"}`}>partners</Link>
                            {showdisplay==="partners" && (
                             <div onMouseLeave={()=>{setHover(null)}} className="absolute flex flex-col items-start justify-center gap-3 rounded-lg p-3 top-[190px]  left-[710px]  w-[200px] h-[200px] bg-[#06896B]">
@@ -202,8 +211,10 @@
                           <Link onClick={()=>setActive("faq")} onMouseLeave={()=>setState(null)} onMouseEnter={()=>setState("faq")} href="/FAQ" className={`uppercase relative font-bold after:absolute after:bg-white after:h-1 after:w-10 after:ml-0 after:left-0 ${state==="faq" || active==="faq"?"after:block":"after:hidden"}`}>FAQ</Link>
                           
                           </div>
+                          
                       </div>
                  </div>
+                 
           </div>
  )
 }

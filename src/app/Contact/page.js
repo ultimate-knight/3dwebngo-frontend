@@ -9,6 +9,8 @@ import Link from "next/link";
 import MapEmbed from "@/Components/MapEmbed/page";
 import { ChevronDown,ChevronRight,ChevronLeft, DivideCircle,Check, TrendingUpIcon } from "lucide-react";
 
+//  https://threedfoundation-backend.onrender.com/
+
 export default function Contact() {
     const [state,setState]=useState("")
     const [partnerfalse,setPartnerfalse]=useState(false)
@@ -31,7 +33,7 @@ export default function Contact() {
     function handlePart(e){
         e.preventDefault()
         setPartnerfalse(true)
-        axios.post("http://localhost:9000/partnership",{
+        axios.post("https://threedfoundation-backend.onrender.com/partnership",{
             partnership:part.partnership,
             Name:part.Name,
             phone:part.phone,
@@ -47,7 +49,7 @@ export default function Contact() {
     function handleAdm(e){
         e.preventDefault()
         setAdmissionfalse(true)
-        axios.post("http://localhost:9000/admission",{
+        axios.post("https://threedfoundation-backend.onrender.com/admission",{
             student:adm.student,
             contact:adm.contact,
             email:adm.email,
@@ -60,7 +62,7 @@ export default function Contact() {
     function handleNgo(e){
         e.preventDefault()
         setNgofalse(true)
-        axios.post("http://localhost:9000/ngo",{
+        axios.post("https://threedfoundation-backend.onrender.com/ngo",{
             ngo:nger.ngo,
             name:nger.name,
             contact:nger.contact,
@@ -74,7 +76,7 @@ export default function Contact() {
     function handleVolunteer(e){
         e.preventDefault()
         setVolunteerFalse(true)
-        axios.post("http://localhost:9000/volunteer",{
+        axios.post(" https://threedfoundation-backend.onrender.com/volunteer",{
             state:voluntr.state,
             volunteer:voluntr.volunteer,
             contact:voluntr.contact,

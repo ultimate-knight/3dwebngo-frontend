@@ -73,17 +73,71 @@ export default function Courses() {
 
 // course:"",name:"",contact:"",email:"",state:"",gender:""
 
+// function handleCreate(e){
+//     e.preventDefault()
+//     setEnrollmentFalse(true)
+//     axios.post("https://threedfoundation-backend.onrender.com/enrollment",{
+//             course:enrollment.course,
+//             name:enrollment.name,
+//             contact:enrollment.contact,
+//             email:enrollment.email,
+//             state:enrollment.state,
+//             gender:enrollment.gender
+//     }).then(()=>{
+//         setEnrollment({course:"",name:"",contact:"",email:"",state:"",gender:""})
+//     }).catch((error)=>{
+//         console.log("error",error.message)
+//     }).finally(()=>{
+//         setEnrollmentFalse(false)
+//     })
+// }
+
+// function handleCreate(e){
+//     e.preventDefault()
+//     setEnrollmentFalse(true)
+//     axios.post("https://threedfoundation-backend.onrender.com/enrollment",{
+//         course:enrollment.course,
+//         name:enrollment.name,
+//         contact:enrollment.contact,
+//         email:enrollment.email,
+//         state:enrollment.state,
+//         gender:enrollment.gender
+//     })
+//     .then((response)=>{
+//         console.log("success response:", response.data)  
+//         setTimeout(()=>{setEnrollmentFalse(false)},3000)
+//         setEnrollment({course:"",name:"",contact:"",email:"",state:"",gender:""})
+//     })
+//     .catch((error)=>{
+//         console.log("error", error.message)
+//     })
+//     .finally(()=>{
+//         setEnrollmentFalse(false)
+//     })
+// }
+
+
+
+
 function handleCreate(e){
     e.preventDefault()
+    console.log("1. handleCreate STARTED")
     setEnrollmentFalse(true)
-    axios.post("http://localhost:9000/enrollment",{
-            course:enrollment.course,
-            name:enrollment.name,
-            contact:enrollment.contact,
-            email:enrollment.email,
-            state:enrollment.state,
-            gender:enrollment.gender
-    }).then(()=>{setTimeout(()=>setEnrollmentFalse(false),3000),setEnrollment({course:"",name:"",contact:"",email:"",state:"",gender:""})}).catch((error)=>console.log("error",error.message))
+    console.log("2. about to send, data:", enrollment)
+    axios.post("https://threedfoundation-backend.onrender.com/enrollment", enrollment, {
+    timeout: 90000
+})
+    .then((response)=>{
+        console.log("3. THEN ran:", response.status)
+        setEnrollment({course:"",name:"",contact:"",email:"",state:"",gender:""})
+    })
+    .catch((error)=>{
+        console.log("4. CATCH ran:", error.message)
+    })
+    .finally(()=>{
+        console.log("5. FINALLY ran")
+        setEnrollmentFalse(false)
+    })
 }
 
 

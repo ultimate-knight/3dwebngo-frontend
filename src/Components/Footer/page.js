@@ -34,7 +34,7 @@ export default function Footer(){
     }
     setloading(true)
 
-    axios.post("http://localhost:9000/newsletter",{
+    axios.post(" https://threedfoundation-backend.onrender.com/newsletter",{
       email:news.email
     }).then(response=>{
       setNews({email:""})

@@ -20,39 +20,39 @@ export default function Blog() {
 
 
     useEffect(()=>{
-    const load = () => axios.get("http://localhost:9000/partnership").then(prev=>setPartnership(prev.data.data))
+    const load = () => axios.get(" https://threedfoundation-backend.onrender.com/").then(prev=>setPartnership(prev.data.data))
     load()
     window.addEventListener("focus", load)
     return () => window.removeEventListener("focus", load)
 },[])
 
     useEffect(()=>{
-        const load=()=>axios.get("http://localhost:9000/admission").then(prev=> setAdmission(prev.data.data))
+        const load=()=>axios.get(" https://threedfoundation-backend.onrender.com/admission").then(prev=> setAdmission(prev.data.data))
         load()
         window.addEventListener("focus",load)
         return ()=>window.removeEventListener("focus",load)
     },[])
 
     useEffect(()=>{
-        axios.get("http://localhost:9000/ngo").then(prev=>setNgo(prev.data.data))
+        axios.get(" https://threedfoundation-backend.onrender.com/ngo").then(prev=>setNgo(prev.data.data))
     },[])
 
      useEffect(()=>{
-        const load=()=>axios.get("http://localhost:9000/volunteer").then(prev=> setVolunteer(prev.data.data))
+        const load=()=>axios.get(" https://threedfoundation-backend.onrender.com/volunteer").then(prev=> setVolunteer(prev.data.data))
         load()
         window.addEventListener("focus",load)
         return ()=>window.removeEventListener("focus",load)
     },[])
 
     useEffect(()=>{
-        const load=()=>axios.get("http://localhost:9000/newsletter").then(prev=>setNewsletter(prev.data.data))
+        const load=()=>axios.get(" https://threedfoundation-backend.onrender.com/newsletter").then(prev=>setNewsletter(prev.data.data))
         load()
         window.addEventListener("focus",load)
         return ()=>window.removeEventListener("focus",load)
     },[])
 
     useEffect(()=>{
-        const load=()=>axios.get("http://localhost:9000/enrollment").then(prev=>setEnrollment(prev.data.data))
+        const load=()=>axios.get(" https://threedfoundation-backend.onrender.com/enrollment").then(prev=>setEnrollment(prev.data.data))
         load()
         window.addEventListener("focus",load)
         return ()=>window.removeEventListener("focus",load)
@@ -60,7 +60,7 @@ export default function Blog() {
 
 
     function partnerdelete(editId){
-        axios.delete(`http://localhost:9000/partnership/${editId}`)
+        axios.delete(` https://threedfoundation-backend.onrender.com//${editId}`)
         .then(() => {
             setPartnership((currentPartnership) =>
                 currentPartnership.filter((item) => item.id !== editId)
@@ -75,7 +75,7 @@ export default function Blog() {
 
 
     function admissiondelete(editId){
-        axios.delete(`http://localhost:9000/admission/${editId}`)
+        axios.delete(` https://threedfoundation-backend.onrender.com/admission/${editId}`)
         .then(() => {
             setAdmission((currentPartnership) =>
                 currentPartnership.filter((item) => item.id !== editId)
@@ -91,7 +91,7 @@ export default function Blog() {
 
 
     function ngodelete(editId){
-        axios.delete(`http://localhost:9000/ngo/${editId}`)
+        axios.delete(` https://threedfoundation-backend.onrender.com/ngo/${editId}`)
         .then(() => {
             setNgo((currentPartnership) =>
                 currentPartnership.filter((item) => item.id !== editId)
@@ -107,7 +107,7 @@ export default function Blog() {
 
 
     function volunteerdelete(editId){
-        axios.delete(`http://localhost:9000/volunteer/${editId}`)
+        axios.delete(` https://threedfoundation-backend.onrender.com/volunteer/${editId}`)
         .then(() => {
             setVolunteer((currentPartnership) =>
                 currentPartnership.filter((item) => item.id !== editId)
@@ -122,7 +122,7 @@ export default function Blog() {
 
 
           function letterdelete(editId){
-        axios.delete(`http://localhost:9000/newsletter/${editId}`)
+        axios.delete(` https://threedfoundation-backend.onrender.com/newsletter/${editId}`)
         .then(() => {
             setNewsletter((currentPartnership) =>
                 currentPartnership.filter((item) => item.id !== editId)
@@ -136,7 +136,7 @@ export default function Blog() {
         }
 
          function enrollmentdelete(editId){
-        axios.delete(`http://localhost:9000/enrollment/${editId}`)
+        axios.delete(` https://threedfoundation-backend.onrender.com/enrollment/${editId}`)
         .then(() => {
             setEnrollment((currentPartnership) =>
                 currentPartnership.filter((item) => item.id !== editId)

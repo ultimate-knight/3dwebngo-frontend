@@ -58,6 +58,11 @@ export default function App() {
           heading: "Computer Training Programs",
           text: "3DWEBSOFT Foundation’s Computer Training Programs are designed to equip individuals with essential digital and computer skills that can support their education, employment, and everyday professional activities.",
         },
+        {
+          image:"/modi.jpeg",
+          heading:"",
+          text:""
+        }
       ];
 
     
@@ -67,26 +72,31 @@ export default function App() {
     <div className="flex flex-col z-50 leading-loose flex-1 items-center overflow-x-hidden justify-center bg-white font-sans">
           {/* overhead bar */}
           <Overheadbar/>
-          
+         
           {/* main */}
           <div className="flex flex-col  items-start -mt-10 justify-between w-full">
             <div className="flex">
               <button onClick={prev}><ChevronLeft size={46} className="h-14 max-[940px]:hidden ml-10 z-20 absolute cursor-pointer bg-[#06896B] text-white"/></button>
+              
               <div className="relative" >
                 <img
                   src={slides[data].image}
                   className="min-w-screen object-cover  rounded-lg max-[887px]:mt-20   h-[600px]"
                   
                 />
-                <div className="absolute inset-0 z-10 flex flex-col items-center justify-center rounded-lg max-[887px]:mt-20 bg-black/56 px-6 text-center text-white">
+                <div className="absolute inset-0 z-10 flex flex-col items-center justify-center rounded-lg max-[887px]:mt-20 bg-black/40 px-6 text-center text-white">
                   <p className="text-4xl font-extrabold max-[500px]:text-xl">{slides[data].heading}</p>
                   <p className="mt-2 max-w-3xl text-base max-[500px]:text-sm font-medium tracking-widest">{slides[data].text}</p>
                 </div>
+                
               </div>
               <button onClick={next}><ChevronRight size={46} className="h-14 max-[940px]:hidden -ml-20 z-20 bg-[#06896B] absolute cursor-pointer text-white"/></button>
             </div>
-            <div className="p-15 max-[1000px]:p-5 mt-20 text-black">
+             
+            <div className="p-15 max-[1000px]:p-5 mt-10 text-black">
+              
               <div className="flex flex-col gap-6">
+               
             <p className="text-3xl text-[#06896B] font-bold max-[500px]:text-3xl">3DWEBSOFT Foundation</p>
             <p className="text-xl font-semibold max-[500px]:text-sm">Empowering India with Education, Skills, and Support</p>
             </div>
@@ -277,7 +287,7 @@ export default function App() {
     <p className="text-left w-[35vw] text-gray-800 max-[1108px]:w-[90vw]">Your time, support, participation, and contribution can play a significant role in 3DWEBSOFT Foundation's efforts to empower individuals and strengthen communities.</p>
      <p className="text-left w-[35vw]  text-gray-800 max-[1108px]:w-[90vw]">Together, we can help create opportunities through education, skills, employment, and community development.</p>
      </div>
-     <Link href="/"><button className="bg-[#06896B] w-28 py-4 font-semibold rounded-lg hover:scale-105 cursor-pointer">Donate now</button></Link>
+     <Link href="/Donate"><button className="bg-[#06896B] w-28 py-4 font-semibold rounded-lg hover:scale-105 cursor-pointer">Donate now</button></Link>
   </div>
 
 </div>
