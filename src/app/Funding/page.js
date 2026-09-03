@@ -36,7 +36,7 @@ export default function Funding() {
           {/* main */}
           <div className="flex flex-col   w-full -mt-10">
             <div className="relative w-full">
-            <img src="/Funder.jpeg" className="w-full h-[790px]  max-[887px]:mt-20 object-cover"/>
+            <img src="/rightnow600.jpeg" className="w-full h-[790px]  max-[887px]:mt-20 object-cover"/>
             <div className="absolute inset-0 z-10 flex flex-col items-center max-[887px]:mt-20 justify-center w-full rounded-lg bg-black/56  text-center text-white">
                   <p className="text-7xl font-extrabold max-[500px]:text-2xl">Funding Partners</p>
                 </div>
@@ -60,7 +60,7 @@ export default function Funding() {
                         </ul>
                     </div>
             </div>
-            <div className="flex flex-col gap-8 items-center p-40 max-[1090px]:p-10 max-[800px]:p-5">
+            <div className="flex flex-col gap-8 items-center p-40 max-[1090px]:p-10 max-[800px]:p-20">
                     <p className="text-3xl font-bold text-[#06896B] max-[500px]:text-2xl">Key Funding Partners</p>
                     <div className="w-full overflow-hidden">
                         <div className="marquee-track">

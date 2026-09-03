@@ -69,7 +69,7 @@ const partnering=[...partnerLogos,...partnerLogos]
                         </div>
                     </div>
             </div>
-            <div className="flex flex-col gap-8 items-center">
+            <div className="flex flex-col gap-8 items-center p-20">
                     <p className="text-3xl font-bold text-[#06896B]">Key NGO Partners</p>
                 <div className="w-full overflow-hidden">
                         <div className="marquee-track">

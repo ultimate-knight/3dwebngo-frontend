@@ -40,7 +40,7 @@ export default function Placement() {
           {/* main */}
           <div className="flex flex-col   w-full -mt-10">
             <div className="relative w-full">
-            <img src="/Placementer.jpeg" className="w-full  h-[790px] max-[887px]:mt-20 object-cover"/>
+            <img src="/rightnow800.jpeg" className="w-full  h-[790px] max-[887px]:mt-20 object-cover"/>
             <div className="absolute inset-0 z-10 flex flex-col items-center justify-center max-[887px]:mt-20 w-full rounded-lg bg-black/56  text-center text-white">
                   <p className="text-7xl font-extrabold max-[500px]:text-2xl">Placement Partners</p>
                 </div>
@@ -66,7 +66,7 @@ export default function Placement() {
                         </div>
                     </div>
             </div>
-            <div className="flex flex-col gap-8 items-center">
+            <div className="flex flex-col gap-8 items-center p-20">
                     <p className="text-3xl font-bold text-[#06896B] p-5">Key Placement Partners</p>
                      <div className="w-full overflow-hidden">
                         <div className="marquee-track">
