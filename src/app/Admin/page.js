@@ -20,7 +20,7 @@ export default function Blog() {
 
 
     useEffect(()=>{
-    const load = () => axios.get(" https://threedfoundation-backend.onrender.com/").then(prev=>setPartnership(prev.data.data))
+    const load = () => axios.get(" https://threedfoundation-backend.onrender.com/partnership").then(prev=>setPartnership(prev.data.data))
     load()
     window.addEventListener("focus", load)
     return () => window.removeEventListener("focus", load)
