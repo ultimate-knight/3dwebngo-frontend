@@ -31,7 +31,7 @@ export default function Future() {
                     <p className=" text-black">Choose the perfect technology program designed for every age group</p>
                     </div>
                     <div className="grid grid-cols-4 max-[1416px]:grid-cols-2 max-[800px]:justify-items-center max-[800px]:grid-cols-1 gap-y-10 gap-x-10">
-                          <div className="min-h-[300px] border-1 relative rounded-lg p-6 flex flex-col gap-5 items-center max-[800px]:w-[90vw] w-full  border-black shadow-md shadow-gray-400 max-[1416px]:w-[45vw] w-[22vw]">
+                          <div className="min-h-[300px] border-1 relative rounded-lg p-8 flex flex-col gap-5 items-center max-[800px]:w-[90vw] w-full  border-black shadow-md shadow-gray-400 max-[1416px]:w-[45vw] w-[22vw]">
                             <p className="absolute top-0 bg-yellow-600 rounded-t-lg h-[40px]  text-white font-extrabold w-full text-center">Level 1</p>
                             <Lightbulb size={50} className="mt-20 text-yellow-600 text-yellow-30000 "/>
                             <div className="flex flex-col gap-1 items-center">
@@ -59,7 +59,7 @@ export default function Future() {
                             </div>
                             <Link href="/Level1" className="bg-yellow-600 rounded-lg p-2 w-full text-center font-bold text-white ">View Details</Link>
                         </div>
-                         <div className="min-h-[300px] border-1 max-[800px]:w-[90vw] relative rounded-lg p-6 flex flex-col gap-5 items-center w-full max-[1416px]:w-[45vw]   border-black shadow-md shadow-gray-400 w-[22vw]">
+                         <div className="min-h-[300px] border-1 max-[800px]:w-[90vw] relative rounded-lg p-8 flex flex-col gap-5 items-center w-full max-[1416px]:w-[45vw]   border-black shadow-md shadow-gray-400 w-[22vw]">
                             <p className="absolute top-0 bg-green-700 rounded-t-lg h-[40px]  text-white font-extrabold w-full text-center">Level 2</p>
                             <Lightbulb size={50} className="mt-20 text-green-700 "/>
                             <div className="flex flex-col gap-1 items-center">
