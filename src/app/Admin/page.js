@@ -60,7 +60,7 @@ export default function Blog() {
 
 
     function partnerdelete(editId){
-        axios.delete(` https://threedfoundation-backend.onrender.com//${editId}`)
+        axios.delete(` https://threedfoundation-backend.onrender.com/partnership/${editId}`)
         .then(() => {
             setPartnership((currentPartnership) =>
                 currentPartnership.filter((item) => item.id !== editId)
