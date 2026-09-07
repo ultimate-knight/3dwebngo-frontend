@@ -71,74 +71,25 @@ export default function Courses() {
 }, [state,itemsperpage,start]);
 
 
-// course:"",name:"",contact:"",email:"",state:"",gender:""
 
-// function handleCreate(e){
-//     e.preventDefault()
-//     setEnrollmentFalse(true)
-//     axios.post("https://threedfoundation-backend.onrender.com/enrollment",{
-//             course:enrollment.course,
-//             name:enrollment.name,
-//             contact:enrollment.contact,
-//             email:enrollment.email,
-//             state:enrollment.state,
-//             gender:enrollment.gender
-//     }).then(()=>{
-//         setEnrollment({course:"",name:"",contact:"",email:"",state:"",gender:""})
-//     }).catch((error)=>{
-//         console.log("error",error.message)
-//     }).finally(()=>{
-//         setEnrollmentFalse(false)
-//     })
-// }
+function handlePart(e){
+        e.preventDefault()
+        setEnrollmentFalse(true)
+        axios.post("https://threedfoundation-backend.onrender.com/enrollment",{
+          course:enrollment.course,
+        name:enrollment.name,
+        contact:enrollment.contact,
+        email:enrollment.email,
+        state:enrollment.state,
+        gender:enrollment.gender
+        }).then(()=>{setTimeout(()=>{setEnrollmentFalse(false)},3000),setEnrollment({course:"",name:"",contact:"",email:"",state:"",gender:""});Toastify.success("enrollment added successfully")}).catch(error=>{console.log("error",error.message);Toastify.error("error occured in enrollment")})
 
-// function handleCreate(e){
-//     e.preventDefault()
-//     setEnrollmentFalse(true)
-//     axios.post("https://threedfoundation-backend.onrender.com/enrollment",{
-//         course:enrollment.course,
-//         name:enrollment.name,
-//         contact:enrollment.contact,
-//         email:enrollment.email,
-//         state:enrollment.state,
-//         gender:enrollment.gender
-//     })
-//     .then((response)=>{
-//         console.log("success response:", response.data)  
-//         setTimeout(()=>{setEnrollmentFalse(false)},3000)
-//         setEnrollment({course:"",name:"",contact:"",email:"",state:"",gender:""})
-//     })
-//     .catch((error)=>{
-//         console.log("error", error.message)
-//     })
-//     .finally(()=>{
-//         setEnrollmentFalse(false)
-//     })
-// }
+
+    }
 
 
 
 
-function handleCreate(e){
-    e.preventDefault()
-    console.log("1. handleCreate STARTED")
-    setEnrollmentFalse(true)
-    console.log("2. about to send, data:", enrollment)
-    axios.post("https://threedfoundation-backend.onrender.com/enrollment", enrollment, {
-    timeout: 90000
-})
-    .then((response)=>{
-        console.log("3. THEN ran:", response.status)
-        setEnrollment({course:"",name:"",contact:"",email:"",state:"",gender:""})
-    })
-    .catch((error)=>{
-        console.log("4. CATCH ran:", error.message)
-    })
-    .finally(()=>{
-        console.log("5. FINALLY ran")
-        setEnrollmentFalse(false)
-    })
-}
 
 
 function next() {
@@ -308,7 +259,7 @@ const partnering=[...array1,...array1]
                         <p id="fomarik" className="text-[#06896B] font-bold text-4xl max-[500px]:text-2xl">Contact Us</p>
                         <p className="text-black text-2xl max-[500px]:text-base">For Enrollment, kindly share your Details</p>
                         </div>
-                        <form id="formarika" onSubmit={handleCreate} className="grid grid-cols-2 max-[1120px]:grid-cols-1 gap-x-11  gap-y-7">
+                        <form id="formarika" onSubmit={handlePart} className="grid grid-cols-2 max-[1120px]:grid-cols-1 gap-x-11  gap-y-7">
                             <select value={enrollment.course} onChange={(e)=>setEnrollment({...enrollment,course:e.target.value})} className="w-[30vw] rounded-lg max-[1120px]:w-[80vw] h-auto border-1 max-[500px]:text-sm p-2 border-black" required>
                                 <option value="">select course preference</option>
                                 <option value="Awareness course">Awareness course</option>

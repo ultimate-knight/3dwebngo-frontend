@@ -74,19 +74,19 @@ export default function About() {
             <p className="text-7xl font-extrabold max-[500px]:text-4xl">About us</p>
           </div>
         </div>
-        <div className="p-20 max-[1000px]:p-5 max-[500px]:p-1 max-[887px]:p-5 font-sans text-black">
-          <div className="flex flex-col gap-5 p-10 text-black">
+        <div className="p-20 max-[1000px]:p-5 max-[500px]:mt-10 max-[500px]:p-1 max-[887px]:p-5 font-sans text-black">
+          <div className="flex flex-col gap-5 p-10 max-[500px]:p-5 text-black">
             <p className="text-[#06896B] text-3xl  uppercase font-bold tracking-widest max-[500px]:text-2xl">
               vision
             </p>
-            <p className="font-sans max-[500px]:text-sm">
+            <p className="font-sans max-[500px]:w-[90vw] max-[500px]:text-sm">
               To become a leading organization in skill development and
               technology solutions — empowering individuals with knowledge and
               practical skills to build a better, self-reliant future for all.
             </p>
           </div>
-          <div className="flex flex-col gap-5  p-10">
-            <p className="text-[#06896B] max-[500px]:text-2xl text-3xl  uppercase font-bold tracking-widest">
+          <div className="flex flex-col gap-5 max-[500px]:p-4  p-10">
+            <p className="text-[#06896B]  max-[500px]:text-2xl text-3xl  uppercase font-bold tracking-widest">
               Mission & Values
             </p>
             <ul className="px-6 flex flex-col max-[500px]:text-sm gap-3 list-disc">
@@ -114,7 +114,7 @@ export default function About() {
             </ul>
           </div>
           <div>
-          <div className="flex flex-col gap-5  p-10">
+          <div className="flex flex-col gap-5 max-[500px]:p-4  p-10">
             <p className="text-[#06896B] max-[500px]:text-2xl text-3xl  uppercase font-bold tracking-widest">
               Governing body
             </p>
@@ -126,7 +126,7 @@ export default function About() {
               Foundation.
             </p>
           </div>
-          <div className="grid grid-cols-3  gap-y-12 gap-x-20 max-[1000px]:grid-cols-1 p-3 max-[500px]:pl-8 pl-10">
+          <div className="grid grid-cols-3  gap-y-12 gap-x-20 max-[1000px]:grid-cols-1 p-3 max-[500px]:pl-8 max-[400px]:pl-6 pl-10">
             <div className="w-[28vw] order-1 max-[1000px]:w-[85vw] flex flex-col hover:-translate-y-5 transform-transition duration-300 p-5 items-center justify-center gap-3  shadow-xl shadow-gray-300 rounded-lg border-2 border-gray-400 min-h-[300px]">
               <img
                 src="/director.jpeg"
@@ -203,7 +203,7 @@ export default function About() {
             <p className="max-[500px]:text-sm">
             3DWEBSOFT Foundation, a non-profit organization incorporated under Section 8 of the Companies Act, 2013 and registered with the Government of India, extends its mission through a network of authorized Franchisee Partners.
             </p>
-            <p> These partners operate under the name and guidelines of the Foundation to deliver its programs and services across various regions. Given below is the list of Franchisee Partners associated with the 3DWEBSOFT Foundation.</p>
+            <p className="max-[500px]:text-sm"> These partners operate under the name and guidelines of the Foundation to deliver its programs and services across various regions. Given below is the list of Franchisee Partners associated with the 3DWEBSOFT Foundation.</p>
           </div>
           <div className="grid grid-cols-3  gap-y-12 gap-x-20 max-[1000px]:grid-cols-1 p-3 max-[500px]:pl-8 pl-10">
             
