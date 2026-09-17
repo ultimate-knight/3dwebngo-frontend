@@ -19,7 +19,7 @@ export default function FAQ() {
           {/* main */}
           <div className="flex flex-col    w-full items-center  justify-center  text-white ">
             <div className="p-10 font-sans text-white">                      
-                    <div className="w-[90vw] bg-[#06896B] flex flex-col items-center justify-center gap-6 max-[887px]:mt-20 min-h-[300px] p-5 rounded-2xl">
+                    <div className="w-[90vw] bg-[#06896B] flex flex-col items-center justify-center gap-6 max-[1070px]:mt-25 max-[700px]:mt-25 max-[887px]:mt-40 min-h-[300px] p-5 rounded-2xl">
                         <p className="font-extrabold text-4xl tracking-widest uppercase max-[500px]:text-2xl">3DWEBSOFT Foundation FAQ</p>
                         <p className="text-xl text-center w-[80vw] max-[500px]:text-sm text-left">Find answers to common questions about 3DWEBSOFT Foundation's programs and how we support community empowerment in India.</p>
                         <div className="flex flex-col gap-1">

@@ -96,8 +96,8 @@ export default function Contact() {
           {/* main */}
           <div className="flex flex-col   w-full items-center -mt-10">
             <div className="relative w-full">
-            <img src="/rightnow96.jpeg" className="w-full  h-[790px] object-cover"/>
-            <div className="absolute inset-0 z-10 flex flex-col items-center justify-center w-full rounded-lg bg-black/56  text-center text-white">
+            <img src="/rightnow96.jpeg" className="w-full max-[887px]:mt-20  h-[790px] object-cover"/>
+            <div className="absolute inset-0 z-10 flex flex-col items-center justify-center max-[887px]:mt-20 w-full rounded-lg bg-black/56  text-center text-white">
                   <p className="text-7xl font-extrabold italic max-[500px]:text-2xl">Contact us</p>
                   <p className="font-semibold text-xl italic  max-[500px]:text-sm">Reach out to us and be a part of someone's future</p>
                 </div>

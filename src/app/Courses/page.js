@@ -112,8 +112,8 @@ const partnering=[...array1,...array1]
           {/* main */}
           <div className="flex flex-col   w-full -mt-10">
             <div className="relative w-full">
-            <img src="/courses.jpeg" className="w-full  h-[790px]   max-[887px]:mt-20 object-cover"/>
-            <div className="absolute inset-0 z-10 flex flex-col items-center justify-center w-full rounded-lg bg-black/56  text-center text-white">
+            <img src="/courses.jpeg" className="w-full  h-[790px]   max-[887px]:mt-30 object-cover"/>
+            <div className="absolute inset-0 z-10 max-[887px]:mt-30  flex flex-col items-center justify-center w-full rounded-lg bg-black/56  text-center text-white">
                   <p className="text-7xl font-extrabold  max-[500px]:text-2xl">Building skills for tomorrow</p>
                 </div>
             </div>
