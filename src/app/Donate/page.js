@@ -23,7 +23,7 @@ export default function Donate() {
                 <p className="max-[500px]:text-sm">We need your support in this mission. Donate now, and change a life today.</p>      
                 <p className="max-[500px]:text-sm">After you donate, please share a screenshot of your contribution at info.3dwebsoftorg@gmail.com so we can acknowledge and track your support.</p>
 </div>
-<img src="/qrcode.jpeg" className="w-[30vw] max-[900px]:w-[80vw] max-[900px]:h-auto h-auto"/>
+<img src="/qrcode56.jpeg" className="w-[30vw] max-[900px]:w-[80vw] max-[900px]:h-auto h-auto"/>
 </div>
 {/* footer */}
 <Footer/>          
