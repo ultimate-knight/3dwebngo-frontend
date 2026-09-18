@@ -73,7 +73,7 @@
      
  
  return (
- <div className="flex flex-col transform:transition duration-300 z-80 gap-5 top-0 h-64  min-w-screen p-5 ">
+ <div className="flex flex-col transform:transition text-white duration-300 z-80 gap-5 top-0 h-64  min-w-screen p-5 ">
                 <div className="bg-white w-full h-32 flex max-[1066px]:flex-col max-[1066px]:h-64 gap-20 max-[1066px]:gap-5 items-center justify-center">
                       <div className="flex gap-4 max-[887px]:grid max-[887px]:grid-cols-2 max-[887px]:gap-x-10 max-[887px]:place-items-center ">
                         <Link className="hover:-translate-y-3 transform:transition duration-300" href="/Contact"><button className="border-1 cursor-pointer border-white bg-[#06896B] text-white font-bold rounded-full py-3 text-sm px-7">Volunteer</button></Link>
@@ -93,8 +93,8 @@
                       <Link href="/Login" className="bg-[#06896B] py-2 px-7 rounded-full hover:-translate-y-3 transform:transition duration-300 text-white rounded-2xl    text-center font-semibold max-[700px]:hidden">Admin</Link>
                 </div>
                 
-                 <div className={`flex justify-start gap-20 p-5 items-center bg-[#06896B] min-w-screen h-36`}>
-                      <img src="/images2.jpeg"  className="pl-20 max-[1060px]:-ml-20 h-36  w-[270px]"/>
+                 <div className={`flex justify-start gap-20 p-5 items-center bg-[#06896B] min-w-screen h-28`}>
+                      <img src="/images2.jpeg"  className="pl-20 max-[1060px]:-ml-20 h-28 rounded-4xl  w-[270px]"/>
                       <div ref={mobileref} className="min-[1060px]:hidden  flex flex-col items-center justify-center">
                         {ham===true?<MenuIcon onClick={()=>setHam((prev)=>!prev)} size={50} className="absolute right-10"/>:<XIcon onClick={()=>setHam((prev)=>!prev)} size={50} className="absolute right-10"/>}
                           {ham===false && (

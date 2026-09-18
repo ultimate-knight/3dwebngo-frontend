@@ -70,7 +70,7 @@ const partnering=[...partnerLogos,...partnerLogos]
                     </div>
             </div>
             <div className="flex flex-col gap-8 items-center p-20">
-                    <p className="text-3xl font-bold text-[#06896B]">Key NGO Partners</p>
+                    <p className="text-3xl font-bold text-[#06896B] w-[90vw] pl-10 max-[500px]:text-2xl text-center">Key NGO Partners</p>
                 <div className="w-full overflow-hidden">
                         <div className="marquee-track">
                             {partnering.map((x, index) => (

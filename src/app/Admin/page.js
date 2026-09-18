@@ -11,6 +11,7 @@ import Ngo from "../Ngo/page";
 export default function Blog() {
     const [partnership,setPartnership]=useState([])
     const [partner,setPartner]=useState(null)
+    const [user1,setUser1]=useState(null)
     const [admission,setAdmission]=useState([])
     const [ngo,setNgo]=useState([])
     const [volunteer,setVolunteer]=useState([])
@@ -57,6 +58,10 @@ export default function Blog() {
         window.addEventListener("focus",load)
         return ()=>window.removeEventListener("focus",load)
     },[])
+
+    function addclick(){
+        setUser1(partner)
+    }
 
 
     function partnerdelete(editId){
@@ -159,18 +164,22 @@ export default function Blog() {
           
           {/* main */}
           <div className="flex flex-col gap-9  p-10   w-full">
-            <div className="grid grid-cols-6  w-[50vw] p-8 gap-x-30 break-words text-black">
-                <button onClick={()=>setPartner("partnership")} className={`${partner==="partnership"?"bg-green-500":"bg-[#06896B]"}  rounded-lg  whitespace-nowrap p-2 w-[120px] h-auto text-white font-semibold`}>Partnership</button>
-                <button onClick={()=>setPartner("admission")} className={`${partner==="admission"?"bg-green-500":"bg-[#06896B]"} w-[120px] text-center rounded-lg text-white font-semibold`}>Admission</button>
-                <button onClick={()=>setPartner("ngo")} className={`${partner==="ngo"?"bg-green-500":"bg-[#06896B]"} rounded-lg w-[120px] text-white font-semibold`}>Ngo</button>
-                <button onClick={()=>setPartner("volunteer")} className={`${partner==="volunteer"?"bg-green-500":"bg-[#06896B]"} w-[120px] rounded-lg text-white font-semibold`}>Volunteer</button>
-                 <button onClick={()=>setPartner("newsletter")} className={`${partner==="newsletter"?"bg-green-500":"bg-[#06896B]"} w-[120px] rounded-lg text-white font-semibold`}>newsletter</button>
-                  <button onClick={()=>setPartner("enrollment")} className={`${partner==="enrollment"?"bg-green-500":"bg-[#06896B]"} w-[120px] rounded-lg text-white font-semibold`}>enrollment</button>
-            </div>
+          <p className="text-3xl text-green-600 font-bold">{`Form submission table for ${user1}`}</p>
+
+            <select value={partner} onChange={(e)=>setUser1(e.target.value)} className="w-full max-w-[200px] font-bold line-clamp-2 truncate p-5 min-w-0 border-1 border-white rounded-2xl bg-green-800">
+                <option value="">Select your Table</option>
+                <option  value="Partnership">Partnership</option>
+                <option value="Admission">Admission</option>
+                <option value="Ngo">Ngo</option>
+                <option value="Volunteer">Volunteer</option>
+                <option value="Newsletter">Newsletter</option>
+                <option value="enrollment">enrollment</option>
+
+            </select>
 
             {/* partnership */}
             
-            {partner==="partnership" && 
+            {user1==="Partnership" && 
             (
             <div className="min-h-[400px] flex flex-col gap-10 min-w-[90vw] bg-green-800 text-white border-1 text-gray-800 border-black rounded-2xl p-5">
                 <div className="grid grid-cols-9 gap-x-7">
@@ -207,7 +216,7 @@ export default function Blog() {
 
                  {/* Admission */}
             
-            {partner==="admission" && 
+            {user1==="Admission" && 
             (
             <div className="min-h-[400px] flex flex-col gap-10 min-w-[90vw] bg-green-800 text-white border-1 text-gray-800 border-black rounded-2xl p-5">
                 <div className="grid grid-cols-9 gap-x-7">
@@ -243,7 +252,7 @@ export default function Blog() {
 
                      {/* Ngo */}
             
-            {partner==="ngo" && 
+            {user1==="Ngo" && 
             (
             <div className="min-h-[400px] flex flex-col gap-10 bg-green-800 text-white min-w-[90vw] border-1 text-gray-800 border-black rounded-2xl p-5">
                 <div className="grid grid-cols-9 gap-x-7">
@@ -278,7 +287,7 @@ export default function Blog() {
 
 
 {/* volunteer */}
-                 {partner==="volunteer" && 
+                 {user1==="Volunteer" && 
             (
             <div className="min-h-[400px] flex flex-col gap-10 bg-green-800 min-w-[90vw] border-1 text-gray-800 border-black rounded-2xl p-5">
                 <div className="grid grid-cols-9 gap-x-7 text-white">
@@ -312,7 +321,7 @@ export default function Blog() {
                 </div>)}
 
 {/* newsletter */}
-                  {partner==="newsletter" && 
+                  {user1==="Newsletter" && 
             (
             <div className="min-h-[400px] flex flex-col gap-10 bg-green-800 text-white break-words min-w-[90vw] border-1 text-gray-800 border-black rounded-2xl p-5">
                 <div className="grid grid-cols-7 gap-x-7 text-white">
@@ -340,7 +349,7 @@ export default function Blog() {
 
                 
 
-                 {partner==="enrollment" && 
+                 {user1==="enrollment" && 
             (
             <div className="min-h-[400px] flex flex-col gap-10 bg-green-800 text-white min-w-[90vw] border-1 text-gray-800 border-black rounded-2xl p-5">
                 <div className="grid grid-cols-9 gap-x-7 ">

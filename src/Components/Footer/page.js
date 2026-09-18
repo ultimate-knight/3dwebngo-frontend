@@ -52,7 +52,7 @@ export default function Footer(){
     }
   
   return (
-    <div className="w-full flex  tracking-widest break-words mt-auto max-[900px]:flex-col max-[900px]:gap-20  justify-center  items-start  p-10 max-[900px]:p-5  min-h-[400px] mt-20 bg-blue-950">
+    <div className="w-full flex  text-white tracking-widest break-words mt-auto max-[900px]:flex-col max-[900px]:gap-20  justify-center  items-start  p-10 max-[900px]:p-5  min-h-[400px] mt-20 bg-blue-950">
           <div className="flex w-[25vw] max-[900px]:mt-10 max-[900px]:order-1 h-auto flex-col gap-6">
             <div className="flex gap-5  items-center">
               <img src="/images2.jpeg" className="rounded-tr-4xl w-[70px] max-[900px]:w-[80px]"/>

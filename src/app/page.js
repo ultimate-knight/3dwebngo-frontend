@@ -121,7 +121,7 @@ export default function App() {
               <div className="grid grid-cols-2 max-[750px]:grid-cols-1 justify-items-center  gap-5 p-5">
                 <div className="flex flex-col gap-3">
                   <p className="text-3xl font-semibold text-gray-600 max-[500px]:text-2xl">Computer Training Programs</p>
-            <div className="group w-[40vw] max-[750px]:w-[90vw] h-[500px] [perspective:1000px]">
+            <div className="group w-[40vw] max-[750px]:w-[90vw] h-[400px] [perspective:1000px]">
   
   
   
@@ -147,7 +147,7 @@ export default function App() {
 
       <div className="flex flex-col gap-3">
                   <p className="text-3xl font-semibold text-gray-600 max-[500px]:text-2xl">Web Designing & Development</p>
-      <div className="group w-[40vw] h-[500px] max-[750px]:w-[90vw] [perspective:1000px]">
+      <div className="group w-[40vw] h-[400px] max-[750px]:w-[90vw] [perspective:1000px]">
   
   
   
@@ -169,7 +169,7 @@ export default function App() {
     </div>
       <div className="flex flex-col gap-3">
                   <p className="text-3xl font-semibold text-gray-600 max-[500px]:text-2xl">Full Stack Development</p>
-      <div className="group  w-[40vw] h-[500px] max-[750px]:w-[90vw] [perspective:1000px]">
+      <div className="group  w-[40vw] h-[400px] max-[750px]:w-[90vw] [perspective:1000px]">
   
   
   
@@ -191,7 +191,7 @@ export default function App() {
     </div>
     <div className="flex flex-col gap-3">
                   <p className="text-3xl font-semibold text-gray-600 max-[500px]:text-2xl">Digital Literacy in Rural Areas</p>
-      <div class="group  w-[40vw] h-[500px] max-[750px]:w-[90vw] [perspective:1000px]">
+      <div class="group  w-[40vw] h-[400px] max-[750px]:w-[90vw] [perspective:1000px]">
   
   
   
@@ -213,7 +213,7 @@ export default function App() {
     </div>
       <div className="flex flex-col gap-3">
                   <p className="text-3xl font-semibold text-gray-600 max-[500px]:text-2xl">Job Drives</p>
-      <div class="group  w-[40vw] h-[500px] max-[750px]:w-[90vw] [perspective:1000px]">
+      <div class="group  w-[40vw] h-[400px] max-[750px]:w-[90vw] [perspective:1000px]">
   
   
   
@@ -234,7 +234,7 @@ export default function App() {
     </div>
     </div><div className="flex flex-col gap-3">
                   <p className="text-3xl font-semibold text-gray-600 max-[500px]:text-3xl">Women Empowerment Programs</p>
-      <div class="group  w-[40vw] h-[500px]  max-[750px]:w-[90vw]  [perspective:1000px]">
+      <div class="group  w-[40vw] h-[400px]  max-[750px]:w-[90vw]  [perspective:1000px]">
   
   
   
@@ -278,7 +278,7 @@ export default function App() {
 </div>
 <div className="flex gap-10 items-center justify-center max-[1108px]:flex-col pt-20 max-[1108px]:p-5 p-10 w-full">
   
-  <img src="/thank.jpeg" className="hover:scale-110 max-[1108px]:w-[90vw] max-[1108px]:h-auto h-[500px]"/>
+  <img src="/thank.jpeg" className="hover:scale-105 max-[1108px]:w-[90vw] max-[1108px]:h-auto h-[500px]"/>
   
   <div className="flex flex-col items-center max-[1108px]:items-start   gap-2 p-5">
 
