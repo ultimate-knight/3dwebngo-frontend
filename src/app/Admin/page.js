@@ -11,7 +11,7 @@ import Ngo from "../Ngo/page";
 export default function Blog() {
     const [partnership,setPartnership]=useState([])
     const [partner,setPartner]=useState(null)
-    const [user1,setUser1]=useState(null)
+    const [user1,setUser1]=useState("Admin")
     const [admission,setAdmission]=useState([])
     const [ngo,setNgo]=useState([])
     const [volunteer,setVolunteer]=useState([])

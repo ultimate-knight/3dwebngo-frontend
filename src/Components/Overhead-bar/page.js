@@ -94,6 +94,7 @@
                 </div>
                 
                  <div className={`flex justify-start gap-20 p-5 items-center bg-[#06896B] min-w-screen h-28`}>
+                  
                       <img src="/images2.jpeg"  className="pl-20 max-[1060px]:-ml-20 h-28 rounded-4xl  w-[270px]"/>
                       <div ref={mobileref} className="min-[1060px]:hidden  flex flex-col items-center justify-center">
                         {ham===true?<MenuIcon onClick={()=>setHam((prev)=>!prev)} size={50} className="absolute right-10"/>:<XIcon onClick={()=>setHam((prev)=>!prev)} size={50} className="absolute right-10"/>}
@@ -211,6 +212,8 @@
                           <Link onClick={()=>setActive("faq")} onMouseLeave={()=>setState(null)} onMouseEnter={()=>setState("faq")} href="/FAQ" className={`uppercase relative font-bold after:absolute after:bg-white after:h-1 after:w-10 after:ml-0 after:left-0 ${state==="faq" || active==="faq"?"after:block":"after:hidden"}`}>FAQ</Link>
                           
                           </div>
+                          <img/>
+                          <img/>
                           
                       </div>
                  </div>
