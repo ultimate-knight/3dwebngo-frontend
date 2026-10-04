@@ -287,7 +287,7 @@ export default function App() {
     <p className="text-left w-[35vw] text-gray-800 max-[1108px]:w-[90vw]">Your time, support, participation, and contribution can play a significant role in 3DWEBSOFT Foundation's efforts to empower individuals and strengthen communities.</p>
      <p className="text-left w-[35vw]  text-gray-800 max-[1108px]:w-[90vw]">Together, we can help create opportunities through education, skills, employment, and community development.</p>
      </div>
-     <Link href="/Donate"><button className="bg-[#06896B] w-28 py-4 font-semibold rounded-lg hover:scale-105 cursor-pointer">Donate now</button></Link>
+     <Link href="/Donate"><button className="bg-[#06896B] w-28 py-4 font-semibold rounded-lg text-white hover:scale-105 cursor-pointer">Donate now</button></Link>
   </div>
 
 </div>

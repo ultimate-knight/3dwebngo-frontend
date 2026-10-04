@@ -79,7 +79,7 @@
                         <Link className="hover:-translate-y-3 transform:transition duration-300" href="/Contact"><button className="border-1 cursor-pointer border-white bg-[#06896B] text-white font-bold rounded-full py-3 text-sm px-7">Volunteer</button></Link>
                         <Link className="hover:-translate-y-3 transform:transition duration-300" href="/Donate"><button className="border-1 cursor-pointer border-white bg-[#06896B] text-white font-bold rounded-full py-3 text-sm px-7">Donate</button></Link>
                         <Link className="hover:-translate-y-3 transform:transition duration-300" href="/Learn"><button className="border-1 border-white bg-[#06896B] text-white font-bold cursor-pointer rounded-full py-3 px-7 text-sm">Learn-Lms</button></Link>
-                        <Link  href="https://www.3DWEBSOFTitsolutions.com/careers.html" className="border-1 hover:-translate-y-3 transform:transition duration-300 border-white bg-[#06896B] text-white font-bold text-sm rounded-full py-3 px-7">Join-Us</Link>
+                        <Link  href="/Careers" className="border-1 hover:-translate-y-3 transform:transition duration-300 border-white bg-[#06896B] text-white font-bold text-sm rounded-full py-3 px-7">Join-Us</Link>
                         
                       </div>
                       
@@ -93,13 +93,13 @@
                       <Link href="/Login" className="bg-[#06896B] py-2 px-7 rounded-full hover:-translate-y-3 transform:transition duration-300 text-white rounded-2xl    text-center font-semibold max-[700px]:hidden">Admin</Link>
                 </div>
                 
-                 <div className={`flex justify-start gap-20 p-5 items-center bg-[#06896B] min-w-screen h-28`}>
+                 <div className={`flex justify-start gap-20 p-5 items-center bg-[#06896B] min-w-screen h-30`}>
                   
-                      <img src="/images2.jpeg"  className="pl-20 max-[1060px]:-ml-20 h-28 rounded-4xl  w-[270px]"/>
-                      <div ref={mobileref} className="min-[1060px]:hidden  flex flex-col items-center justify-center">
+                      <img src="/images2.jpeg"  className="pl-20 max-[1099px]:-ml-20 h-30 rounded-4xl  w-[270px]"/>
+                      <div ref={mobileref} className="min-[1099px]:hidden  flex flex-col items-center justify-center">
                         {ham===true?<MenuIcon onClick={()=>setHam((prev)=>!prev)} size={50} className="absolute right-10"/>:<XIcon onClick={()=>setHam((prev)=>!prev)} size={50} className="absolute right-10"/>}
                           {ham===false && (
-                             <div className="flex gap-10 mt-30    max-[1060px]:flex-col  max-[1060px]:absolute max-[1060px]:right-0 max-[1060px]:mt-[600px] max-[1060px]:bg-[#06896B] max-[1060px]:w-[300px] max-[1060px]:items-start max-[1060px]:p-7">
+                             <div className="flex gap-10 mt-30    max-[1099px]:flex-col  max-[1099px]:absolute max-[1099px]:right-0 max-[1099px]:mt-[600px] max-[1099px]:bg-[#06896B] max-[1099px]:w-[300px] max-[1099px]:items-start max-[1099px]:p-7">
                           
                           <Link onClick={()=>{setActive("home"),setHam(true),setHover(null)}} onMouseLeave={()=>setState(null)} onMouseEnter={()=>setState("home")} href="/" className={`uppercase relative font-bold after:absolute after:bg-white after:h-1 after:w-16 after:left-0 ${state==="home" || active==="home"?"after:block":"after:hidden"}`}>Home</Link>
                           
@@ -159,7 +159,7 @@
 
                           )}
                       </div>
-                      <div className="flex gap-10 max-[1060px]:hidden max-[1060px]:flex-col">
+                      <div className="flex gap-10 max-[1099px]:hidden max-[1099px]:flex-col">
                           
                           <Link onClick={()=>setActive("home")} onMouseLeave={()=>setState(null)} onMouseEnter={()=>setState("home")} href="/" className={`uppercase relative font-bold after:absolute after:bg-white after:h-1 after:w-16 after:left-0 ${state==="home" || active==="home"?"after:block":"after:hidden"}`}>Home</Link>
 
