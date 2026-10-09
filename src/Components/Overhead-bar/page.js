@@ -78,7 +78,7 @@
                       <div className="flex gap-4 max-[887px]:grid max-[887px]:grid-cols-2 max-[887px]:gap-x-10 max-[887px]:place-items-center ">
                         <Link className="hover:-translate-y-3 transform:transition duration-300" href="/Contact"><button className="border-1 cursor-pointer border-white bg-[#06896B] text-white font-bold rounded-full py-3 text-sm px-7">Volunteer</button></Link>
                         <Link className="hover:-translate-y-3 transform:transition duration-300" href="/Donate"><button className="border-1 cursor-pointer border-white bg-[#06896B] text-white font-bold rounded-full py-3 text-sm px-7">Donate</button></Link>
-                        <Link className="hover:-translate-y-3 transform:transition duration-300" href="/Learn"><button className="border-1 border-white bg-[#06896B] text-white font-bold cursor-pointer rounded-full py-3 px-7 text-sm">Learn-Lms</button></Link>
+                        <Link className="hover:-translate-y-3 transform:transition duration-300" href="https://3dwebsoftlms-learning.online"><button className="border-1 border-white bg-[#06896B] text-white font-bold cursor-pointer rounded-full py-3 px-7 text-sm">Learn-Lms</button></Link>
                         <Link  href="/Careers" className="border-1 hover:-translate-y-3 transform:transition duration-300 border-white bg-[#06896B] text-white font-bold text-sm rounded-full py-3 px-7">Join-Us</Link>
                         
                       </div>
