@@ -89,7 +89,7 @@ export default function Footer(){
                <Link href="/About" className="hover:text-[#06896B] hover:translate-x-3 transform-transition duration-300">About Us</Link>
                 <Link href="/Contact" className="hover:text-[#06896B] hover:translate-x-3 transform-transition duration-300">Volunteer</Link>
                  <Link href="/Donate" className="hover:text-[#06896B] hover:translate-x-3 transform-transition duration-300">Donate</Link>
-                  <Link href="/Learn" className="hover:text-[#06896B] hover:translate-x-3 transform-transition duration-300">Learn-lms</Link>
+                  <Link href="https://3dwebsoftlms-learning.online" className="hover:text-[#06896B] hover:translate-x-3 transform-transition duration-300">Learn-lms</Link>
                    <Link href="/Contact" className="hover:text-[#06896B] hover:translate-x-3 transform-transition duration-300">Join us</Link>
             </div>
           </div>
