@@ -35,6 +35,20 @@ export default function Gallery() {
     {id:26,scr:"video26.mp4"},
   ]
 
+  const lezor=[
+     {id:1,scr:"glimpse1.jpeg"},
+    {id:3,scr:"glimpse2.jpeg"},
+    {id:4,scr:"glimpse3.jpeg"},
+    {id:5,scr:"glimpse4.jpeg"},
+    {id:6,scr:"glimpse5.jpeg"},
+    {id:7,scr:"glimpse6.jpeg"},
+    {id:8,scr:"gachibowli1.jpeg"},
+    {id:9,scr:"gachibowli2.jpeg"},
+    {id:10,scr:"gachibowli3.jpeg"},
+    {id:11,scr:"gachibowli4.jpeg"},
+
+  ]
+
     
   return (
     <div className="flex flex-col flex-1 leading-loose gap-0 tracking-widest  items-center overflow-x-hidden min-h-screen justify-center bg-white font-sans">
@@ -49,16 +63,19 @@ export default function Gallery() {
                             <p className="max-[500px]:text-sm">A glimpse into classrooms, workshops and student life at 3DWEBSOFT foundation.</p>
             </div>
             <div className="pt-10 p-10 grid grid-cols-3 max-[800px]:grid-cols-1 max-[1000px]:grid-cols-2 gap-x-10 gap-y-10">
-                <img src="/glimpse1.jpeg" className="w-[30vw] hover:-translate-y-3 transform-transition duration-300 max-[800px]:w-[90vw] max-[1000px]:w-[45vw] h-[500px] object-cover"/>
-                <img src="/glimpse2.jpeg" className="w-[30vw] hover:-translate-y-3 transform-transition duration-300 max-[800px]:w-[90vw] max-[1000px]:w-[45vw] h-[500px] object-cover"/>
-                <img src="/glimpse3.jpeg" className="w-[30vw] hover:-translate-y-3 transform-transition duration-300 max-[800px]:w-[90vw] max-[1000px]:w-[45vw] h-[500px] object-cover"/>
-                 <img src="/glimpse4.jpeg" className="w-[30vw] hover:-translate-y-3 transform-transition duration-300 max-[800px]:w-[90vw] max-[1000px]:w-[45vw] h-[500px] object-cover"/>
-                <img src="/glimpse5.jpeg" className="w-[30vw] hover:-translate-y-3 transform-transition duration-300 max-[800px]:w-[90vw] max-[1000px]:w-[45vw] h-[500px] object-cover"/>
-                <img src="/glimpse6.jpeg" className="w-[30vw] hover:-translate-y-3 transform-transition duration-300 max-[800px]:w-[90vw] max-[1000px]:w-[45vw] h-[500px] object-cover"/>
+              {
+                lezor.map((x)=>(
+                   <div key={x.id} >
+                <img src={x.scr} className="w-[30vw] hover:-translate-y-3 transform-transition duration-300 max-[800px]:w-[90vw] max-[1000px]:w-[45vw] h-[500px] object-cover"/>
+               </div>
+
+                ))
+             
+}
                 {
                   rezor.map(x=>(
                     <div key={x.id} className="w-full">
-                      <iframe src={x.scr} title="video mp4" className="w-full aspect-video rounded-lg" allowFullScreen/>
+                      <iframe src={x.scr} title="video mp4" className="w-full h-[500px] aspect-video rounded-lg" allowFullScreen/>
                     </div>
                   ))
                 }

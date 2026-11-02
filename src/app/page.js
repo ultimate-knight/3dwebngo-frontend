@@ -62,6 +62,26 @@ export default function App() {
           image:"/modi.jpeg",
           heading:"",
           text:""
+        },
+        {
+          image:"/gachibowli1.jpeg",
+          heading:"",
+          text:""
+        },
+        // {
+        //   image:"/gachibowli2.jpeg",
+        //   heading:"",
+        //   text:""
+        // },
+        {
+          image:"/gachibowli3.jpeg",
+          heading:"",
+          text:""
+        },
+        {
+          image:"/gachibowli4.jpeg",
+          heading:"",
+          text:""
         }
       ];
 
